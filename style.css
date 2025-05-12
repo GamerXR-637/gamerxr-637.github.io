@@ -124,27 +124,43 @@ span:nth-child(7) {
 }
 
 span:nth-child(8) {
-    top: 0px;
+    top: 1000px;
     right: 700px;
     left: initial;
     animation-delay: 1.4s;
-    animation-duration: 1.25s;
+    animation-duration: 5.25s;
 }
 
 span:nth-child(9) {
-    top: 0px;
-    right: 1000px;
+    top: 1000px;
+    right: 100px;
     left: initial;
     animation-delay: 0.75s;
     animation-duration: 2.25s;
 }
 
 span:nth-child(10) {
-    top: 0px;
-    right: 1000px;
+    top: 1000px;
+    right: 700px;
     left: initial;
     animation-delay: 2.75s;
     animation-duration: 2.25s;
+}
+
+span:nth-child(11) {
+    top: 1000px;
+    right: 1000px;
+    left: initial;
+    animation-delay: 5s;
+    animation-duration: 10s;
+}
+
+span:nth-child(12) {
+    top: 1000px;
+    right: 1000px;
+    left: initial;
+    animation-delay: 1s;
+    animation-duration: 8s;
 }
     body {
         font-family: "Courier New", Courier, monospace;
@@ -172,7 +188,7 @@ span:nth-child(10) {
 
     .top-left-image {
         position: fixed;
-        top: 30px;
+        top: 40px;
         left: 20px;
         border: 3px solid rgb(0, 0, 0);
         width: 205px;
@@ -182,7 +198,7 @@ span:nth-child(10) {
 
     .below-image-text {
         position: fixed;
-        top: 240px;
+        top: 260px;
         left: 10px;
         color: #ffffff;
         font-size: 15px;
@@ -211,6 +227,7 @@ span:nth-child(10) {
         border-radius: 0px;
         width: 230px;
         font-size: 15px;
+        height: 130px;
 
     }
 
@@ -311,3 +328,22 @@ span:nth-child(10) {
         padding: 20px;
         border: 2px solid #21bdd1;
     }
+
+    .banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1e1e1e;
+    color: #21bdd1;
+    text-align: center;
+    padding: 10px 0;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 24px;
+    border-bottom: 2px solid #21bdd1;
+    z-index: 1000; /* Ensures the banner stays on top */
+}
+
+body {
+    padding-top: 60px; /* Add padding to prevent content from overlapping the banner */
+}
