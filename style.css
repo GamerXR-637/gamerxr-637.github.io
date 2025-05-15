@@ -344,6 +344,11 @@ facts {
     border: 2px solid #21bdd1;
 }
 
+.para a:hover {
+    text-decoration: underline;
+    color: #e42584;
+}
+
 .banner {
     position: fixed;
     top: 0;
