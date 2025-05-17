@@ -196,7 +196,6 @@ body {
     }
 
     background-size: 200% 200%;
-    color: #000000;
     margin: 20px;
 }
 
@@ -230,19 +229,34 @@ body {
 .footer {
     position: fixed;
     bottom: 10px;
-    width: 100%;
     text-align: left;
     color: #ffffff;
     background: fixed;
     background-color: rgb(4, 11, 24);
-    padding: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 5px;
     font-family: "Courier New", Courier, monospace;
     border: 2px solid #040211;
     border-radius: 0px;
-    width: 230px;
-    font-size: 15px;
+    width: 260px;
+    font-size: 14px;
     height: 130px;
 
+}
+
+.footer code {
+    color: #a725e4;
+}
+
+.footer a {
+    color: #0ebfdf;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #0e69df;
+    text-decoration: underline;
 }
 
 .terminal-box {
@@ -344,6 +358,15 @@ facts {
     border: 2px solid #21bdd1;
 }
 
+.para code {
+    color: #259ee4;
+}
+
+.para b {
+    color: #d67ec7;
+    text-decoration: underline;
+}
+
 .para a:hover {
     text-decoration: underline;
     color: #e42584;
@@ -390,6 +413,7 @@ body {
     border: 2px solid #21bdd1;
     font-family: "Courier New", Courier, monospace;
     z-index: 1000;
+    width: auto;
 }
 
 .link-selector select {
@@ -403,11 +427,11 @@ body {
 .text {
     position: fixed;
     top: 30px;
-    left: 1020px;
+    right: 20px;
     color: #ffffff;
     font-size: 15px;
     font-family: "Courier New", Courier, monospace;
-    width: 230px;
+    width: 210px;
     background-color: #1e1e1e;
     height: fit-content;
     margin-top: 10px;
@@ -416,6 +440,7 @@ body {
     padding: 10px;
     line-height: 20px;
     text-align: center;
+    font-size: smaller;
 }
 
 .text a {
