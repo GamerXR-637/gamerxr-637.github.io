@@ -31,6 +31,10 @@ section {
     50% {
         transform: scale(1.2);
     }
+
+    30% {
+        transform: scale(1.05);
+    }
 }
 
 span {
@@ -207,6 +211,7 @@ body {
     width: 205px;
     height: auto;
     margin: auto;
+    box-shadow: #e42584 0px 0px 20px;
 }
 
 .below-image-text {
@@ -224,6 +229,7 @@ body {
     border: 2px solid #21bdd1;
     padding: 10px;
     line-height: 20px;
+    box-shadow: #4721d1 0px 0px 20px;
 }
 
 .footer {
@@ -242,7 +248,7 @@ body {
     width: 260px;
     font-size: 14px;
     height: 130px;
-
+    box-shadow: #4721d1 0px 0px 20px;
 }
 
 .footer code {
@@ -272,6 +278,20 @@ body {
     border-radius: 0px;
     width: 800px;
     height: auto;
+    box-shadow: #4721d1 0px 0px 20px;
+}
+
+.terminal-box h1 {
+    text-align: center;
+        text-shadow:
+        0 0 5px #4721d1,
+        0 0 10px #cb21d1,
+        0 0 20px #21bdd1,
+        0 0 40px #2141d1,
+        0 0 80px #d12156;
+    font-weight: bold;
+    text-decoration: wavy;
+    letter-spacing: 2px;
 }
 
 code {
@@ -296,6 +316,7 @@ color2 {
     border-radius: 0px;
     height: auto;
     width: 800px;
+    box-shadow: #21bdd1 0px 0px 25px;
 }
 
 .projects h2 {
@@ -328,6 +349,7 @@ color2 {
     width: 30px;
     vertical-align: middle;
     margin-right: 10px;
+    box-shadow: #cb21d1 0px 0px 5px;
 }
 
 facts {
@@ -344,6 +366,7 @@ facts {
     background-color: #1e1e1e;
     padding: 20px;
     border: 2px solid #21bdd1;
+    box-shadow: #0ebfdf 0px 0px 20px;
 }
 
 .para {
@@ -356,15 +379,24 @@ facts {
     background-color: #1e1e1e;
     padding: 20px;
     border: 2px solid #21bdd1;
+    box-shadow: #4721d1 0px 0px 20px;
 }
 
 .para code {
     color: #259ee4;
 }
 
+.para a {
+    color: #983af0;
+    text-align: center;
+}
+
 .para b {
     color: #d67ec7;
     text-decoration: underline;
+    text-shadow: 0 0 5px #21bdd1;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
 .para a:hover {
@@ -385,12 +417,11 @@ facts {
     font-size: 24px;
     border-bottom: 2px solid #21bdd1;
     z-index: 1000;
-    /* Ensures the banner stays on top */
-}
+    box-shadow: #ffffff 0px 0px 20px;
+    }
 
 body {
     padding-top: 60px;
-    /* Add padding to prevent content from overlapping the banner */
 }
 
 .below-image-image {
@@ -401,6 +432,7 @@ body {
     width: 225px;
     height: 230;
     margin: 10px;
+    box-shadow: #6c9ee9 0px 0px 20px;
 }
 
 .link-selector {
@@ -408,20 +440,22 @@ body {
     bottom: 10px;
     right: 10px;
     background-color: #1e1e1e;
-    color: #21bdd1;
+    color: #60dee7;
     padding: 10px;
-    border: 2px solid #21bdd1;
+    border: 2px solid #983af0;
     font-family: "Courier New", Courier, monospace;
     z-index: 1000;
     width: auto;
+    box-shadow: #ffffff 0px 0px 20px;
 }
 
 .link-selector select {
     background-color: #1e1e1e;
-    color: #21bdd1;
-    border: 1px solid #21bdd1;
+    color: #d121ba;
+    border: 1px solid #e42584;
     padding: 5px;
     font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
 }
 
 .text {
@@ -441,6 +475,7 @@ body {
     line-height: 20px;
     text-align: center;
     font-size: smaller;
+    box-shadow: #983af0 0px 0px 20px;
 }
 
 .text a {
