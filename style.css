@@ -412,12 +412,12 @@ facts {
     background-color: #1e1e1e;
     color: #21bdd1;
     text-align: center;
-    padding: 10px 0;
+    padding: 1px 0;
     font-family: "Courier New", Courier, monospace;
-    font-size: 24px;
+    font-size: 15px;
     border-bottom: 2px solid #21bdd1;
     z-index: 1000;
-    box-shadow: #ffffff 0px 0px 20px;
+    box-shadow: #ffffff 0px 10px 20px;
     }
 
 body {
@@ -487,4 +487,58 @@ body {
 .text a:hover {
     text-decoration: underline;
     color: #e42584;
+}
+
+.scp {
+    width: 804px;
+    height: auto;
+    position: absolute;
+    top: 1800px;
+    left: 320px;
+    color: #ffffff;
+    background-color: #1e1e1e;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border: 2px solid #21bdd1;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    box-shadow: #ffffff 0px 0px 20px;
+}
+
+.scp h2 {
+    text-align: center;
+    text-shadow:
+    0 0 5px #4721d1,
+    0 0 10px #cb21d1,
+    0 0 20px #21bdd1,
+    0 0 40px #2141d1,
+    0 0 80px #d12156;
+    font-weight: bold;
+    text-decoration: wavy;
+    letter-spacing: 2px;
+}
+
+.scp a {
+    color: #6adcee;
+    text-decoration: none;
+    align-items: center;
+    text-shadow: 
+    0 0 5px#2141d1,
+    0 0 10px #d12156,
+    0 0 15px #a725e4,
+    0 0 20px #ffffff
+    ;
+}
+
+.scp a:hover {
+    text-decoration: underline;
+    color: #e42584;
+    text-shadow: 
+    0 0 5px #2141d1,
+    0 0 10px #d12156,
+    0 0 15px #a725e4,
+    0 0 20px #ffffff
+    ;
 }
