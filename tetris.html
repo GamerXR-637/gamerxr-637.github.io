@@ -3,14 +3,18 @@
 <head>
   <title>Javascript Tetris</title>
   <style>
-    body      { font-family: Helvetica, sans-serif; }
-    #tetris   { margin: 1em auto; padding: 1em; border: 4px solid black; border-radius: 10px; background-color: #F8F8F8; }
+    body      { font-family: Helvetica, sans-serif; color: white; text-shadow: 0 0 5px white}
+    /* .footer   { position: fixed; bottom: 0; left: 0; background: rgba(30, 30, 30, 0.95); color: #fff; padding: 0.5em 1em; border-top-right-radius: 10px; box-shadow: 2px 2px 8px #222; font-size: 1em; z-index: 100; } */
+    .footer   { text-align: top-left; font-size: 20px; color:#8a157a; position: fixed; bottom: 0; left: 0; padding: 10px; background-size: fit; background-color: rgba(0, 0, 0, 0.5); box-shadow: 0 0 10px rgb(72, 85, 206); font-family: 'Courier New', Courier, monospace; font-weight: bold;}
+    .footer a { color: #8a157a; }
+    .footer a:hover { color: #000000; text-shadow: 0 0 5px #ff08de, 0 0 10px #6e3667, 0 0 15px #b667ab }
+    #tetris   { margin: 1em auto; padding: 1em; border: 4px solid black; border-radius: 10px; background-image: url(bg1.png); }
     #stats    { display: inline-block; vertical-align: top; }
     #canvas   { display: inline-block; vertical-align: top; background: url(texture.jpg); box-shadow: 10px 10px 10px #999; border: 2px solid #333; }
     #menu     { display: inline-block; vertical-align: top; position: relative; }
     #menu p   { margin: 0.5em 0; text-align: center; }
-    #menu p a { text-decoration: none; color: black; }
-    #upcoming { display: block; margin: 0 auto; background-color: #E0E0E0; }
+    #menu p a { text-decoration: none; color: rgb(255, 255, 255); }
+    #upcoming { display: block; margin: 0 auto; background: linear-gradient(45deg, #21bdd1, #5139a8, #8a157a); }
     #score    { color: red; font-weight: bold; vertical-align: middle; }
     #rows     { color: blue; font-weight: bold; vertical-align: middle; }
     #stats    { position: absolute; bottom: 0em; right: 1em; }
@@ -23,20 +27,23 @@
     @media screen and (min-width: 900px) and (min-height: 900px)  { #tetris { font-size: 2.25em; width: 850px; } #menu { width: 400px; height: 800px; } #upcoming { width: 200px; height: 200px; } #canvas { width: 400px; height: 800px; } } /* 40px chunks */
   </style>
 </head>
-
 <body>
 
   <div id="tetris">
     <div id="menu">
       <p id="start"><a href="javascript:play();">Press Space to Play.</a></p>
       <p><canvas id="upcoming"></canvas></p>
-      <p>score <span id="score">00000</span></p>
-      <p>rows <span id="rows">0</span></p>
+      <p>Score: <span id="score">00000</span></p>
+      <p>Rows: <span id="rows">0</span></p>
     </div>
     <canvas id="canvas">
       Sorry, this example cannot be run because your browser does not support the &lt;canvas&gt; element
     </canvas>
   </div>
+
+  <footer class="footer">
+    Made by <a href="https://github.com/jakesgordon/javascript-tetris" target="_blank" rel="noopener">jakesgordon</a>
+  </footer>
 
   <script src="stats.js"></script>
   <script>
