@@ -7,3 +7,8 @@ This is a fun project to make as it allows me to put all the project that I make
 The source code is open source and you can use it for your own website. However, the username '\_gamerxr.637\_' and 'GamerXR-637' are not permitted to be used.
 
 LICENSE: CC0 1.0 Universal
+
+
+Hidden Tetris made by <a href="https://github.com/jakesgordon/javascript-tetris" target="_blank" rel="noopener">jakesgordon/javascript-tetris</a> 
+
+Give a vist to him and a star his repo.
