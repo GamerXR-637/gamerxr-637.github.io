@@ -11,7 +11,6 @@ let originalFaviconHref = originalFavicon ? originalFavicon.href : null;
 
 window.addEventListener('blur', () => {
     document.title = "_gamerxr.637_ || :)";
-    changeFavicon('clippy.png'); // Replace with your alternate favicon URL
 });
 
 window.addEventListener('focus', () => {
@@ -58,8 +57,9 @@ function activateKonamiCode() {
     }
 }
 
-window.navigateToWebsite = function(url) {
-    if (url) {
-        window.open(url, '_blank');
+// Redirect to t.html when user presses the "t" key
+document.addEventListener('keydown', (event) => {
+    if (event.key.toLowerCase() === 't') {
+        window.location.href = 'tetris.html';
     }
-};
+});
