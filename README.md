@@ -9,4 +9,7 @@ This page is for my bio, my projects and about me.
 Made by <a href="https://github.com/jakesgordon/javascript-tetris" target="_blank" rel="noopener">jakesgordon</a> 
 
 - Details: https://jakesgordon.com/writing/javascript-tetris/
+---
+### <a href="https://codesandbox.io/p/sandbox/css-shooting-stars-animation-w96ut" target="_blank" rel="noopener">Shooting Stars</a>
 
+Made by <a href="https://codesandbox.io/" target="_blank" rel="noopener">codesandbox.io/</a> 
