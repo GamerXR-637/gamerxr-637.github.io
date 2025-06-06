@@ -185,7 +185,13 @@
             <p>Congratulations on unlocking the Konami Code!</p>
         </div>
     </div>
-
+<script>
+    function navigateToWebsite(url) {
+    if (url && url !== "Links") {
+        window.open(url, '_blank');
+    }
+}
+</script>
     <div class="link-selector">
         <label for="link-options">Links:</label>
         <select id="link-options" onchange="navigateToWebsite(this.value)">
