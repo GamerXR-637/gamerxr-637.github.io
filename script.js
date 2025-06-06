@@ -5,6 +5,12 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+function navigateToWebsite(url) {
+    if (url && url !== "Links") {
+        window.open(url, '_blank');
+    }
+}
+
 const originalTitle = document.title;
 const originalFavicon = document.querySelector("link[rel~='icon']");
 let originalFaviconHref = originalFavicon ? originalFavicon.href : null;
