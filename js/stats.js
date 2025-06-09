@@ -208,7 +208,7 @@ document.addEventListener('keydown', (event) => {
         location.reload();
     } else if (key === 'm') {
         window.location.href = 'index.html';
-    } else if (key === 'g') {
+    } else if (key === 's') {
         window.location.href = 'story.html';
     }
 });

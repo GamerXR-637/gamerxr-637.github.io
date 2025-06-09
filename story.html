@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Story</title>
     <link rel="stylesheet" href="other/Story-styles.css">
+        <link rel="icon" href="other/book.png" type="image/x-icon">
 </head>
 
 <h1 class="coming-soon-title">
@@ -18,5 +19,16 @@
     <br> Stay tuned for updates!
 
 </p>
+
+<script>
+    document.addEventListener('keydown', (event) => {
+    const key = event.key.toLowerCase();
+    if (key === 't') {
+        window.location.href = 'tetris.html';
+    } else if (key === 'm') {
+        window.location.href = 'index.html';
+    }
+});
+</script>
 
 </html>

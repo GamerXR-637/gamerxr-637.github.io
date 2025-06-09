@@ -62,7 +62,7 @@ document.addEventListener('keydown', (event) => {
     const key = event.key.toLowerCase();
     if (key === 't') {
         window.location.href = 'tetris.html';
-    } else if (key === 'g') {
+    } else if (key === 's') {
         window.location.href = 'story.html';
     }
 });
