@@ -16,7 +16,7 @@ section {
     width: 100%;
     height: 100vh;
     background: url(other/bg0.jpg);
-    background-position-x: center;
+    background-position: center;
     background-size: cover;
     animation: animateBg 50s linear infinite;
     z-index: -1;
