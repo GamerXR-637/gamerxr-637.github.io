@@ -1,5 +1,5 @@
 body {
-    background: #181818;
+    background: linear-gradient(135deg, #1a1a1a, #353535, #474747);
     color: #fff;
     font-family: 'Segoe UI', Arial, sans-serif;
     display: flex;
