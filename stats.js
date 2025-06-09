@@ -203,7 +203,7 @@ var Stats = function () {
 };
 
 document.addEventListener('keydown', (event) => {
-    if (event.key.toLowerCase() === 't') {
-        window.location.href = 'tetris.html';
+    if (event.key.toLowerCase() === 'm') {
+        window.location.href = 'index.html';
     }
 });
