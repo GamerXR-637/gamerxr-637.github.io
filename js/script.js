@@ -63,6 +63,6 @@ document.addEventListener('keydown', (event) => {
     if (key === 't') {
         window.location.href = 'tetris.html';
     } else if (key === 's') {
-        window.location.href = 'story.html';
+        window.location.href = 'writings.html';
     }
 });

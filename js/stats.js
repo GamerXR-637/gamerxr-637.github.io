@@ -209,6 +209,6 @@ document.addEventListener('keydown', (event) => {
     } else if (key === 'm') {
         window.location.href = 'index.html';
     } else if (key === 's') {
-        window.location.href = 'story.html';
+        window.location.href = 'writings.html';
     }
 });
