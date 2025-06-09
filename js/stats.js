@@ -204,6 +204,6 @@ var Stats = function () {
 
 document.addEventListener('keydown', (event) => {
     if (event.key.toLowerCase() === 'm') {
-        window.location.href = 'index.html';
+        window.location.href = 'html/index.html';
     }
 });
