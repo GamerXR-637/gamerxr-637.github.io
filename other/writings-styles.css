@@ -25,3 +25,21 @@ body {
     font-size: 1.2rem;
     color: #bbbbbb;
 }
+
+.banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1e1e1e;
+    color: #2421d1;
+    text-align: center;
+    padding: 1px 0;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 15px;
+    border-bottom: 2px solid #21bdd1;
+    z-index: 1000;
+    box-shadow: #ffffff 0px 10px 20px;
+    text-shadow: #21bdd1 0px 0px 20px;
+    padding-top: 20px;
+    }
