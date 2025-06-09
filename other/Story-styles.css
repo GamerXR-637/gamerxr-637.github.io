@@ -1,0 +1,27 @@
+body {
+    background: #181818;
+    color: #fff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.coming-soon-container {
+    text-align: center;
+}
+
+.coming-soon-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+.coming-soon-text {
+    font-size: 1.2rem;
+    color: #bbbbbb;
+}

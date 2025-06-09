@@ -59,7 +59,10 @@ function activateKonamiCode() {
 
 // Redirect to t.html when user presses the "t" key
 document.addEventListener('keydown', (event) => {
-    if (event.key.toLowerCase() === 't') {
+    const key = event.key.toLowerCase();
+    if (key === 't') {
         window.location.href = 'tetris.html';
+    } else if (key === 'g') {
+        window.location.href = 'story.html';
     }
 });
