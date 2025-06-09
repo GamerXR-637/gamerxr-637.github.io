@@ -205,7 +205,7 @@ var Stats = function () {
 document.addEventListener('keydown', (event) => {
     const key = event.key.toLowerCase();
     if (key === 't') {
-        window.location.href = window.location.pathname + '?reload=' + new Date().getTime();
+        location.reload();
     } else if (key === 'm') {
         window.location.href = 'index.html';
     } else if (key === 'g') {
