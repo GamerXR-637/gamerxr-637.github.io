@@ -1,5 +1,0 @@
-To-Do
-
-1. Add the c botton funtuion and with others
-2. make the index folders
-3. Put each on it own folder 

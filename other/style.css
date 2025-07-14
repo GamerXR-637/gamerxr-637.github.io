@@ -7,6 +7,26 @@
 body {
     font-family: "Courier New", Courier, monospace;
     padding-bottom: 20px;
+    font-family: "Courier New", Courier, monospace;
+    background: linear-gradient(90deg, #080e49 0%, #1f1b55 100%);
+    animation: gradientAnimation 8s infinite alternate;
+
+    @keyframes gradientAnimation {
+        0% {
+            background: linear-gradient(90deg, #080e49 0%, #1f1b55 100%);
+        }
+
+        50% {
+            background: linear-gradient(90deg, #1f1b55 0%, #080e49 100%);
+        }
+
+        100% {
+            background: linear-gradient(90deg, #080e49 0%, #1f1b55 100%);
+        }
+    }
+
+    background-size: 200% 200%;
+    margin: 20px;
 }
 
 section {
@@ -45,29 +65,6 @@ section {
     }
 }
 
-span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 4px;
-    height: 4px;
-    background: #fff;
-    border-radius: 50%;
-    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgb(255, 0, 0);
-    animation: animate 3s linear infinite;
-    z-index: -1;
-}
-
-span::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 321px;
-    height: 5px;
-    background: linear-gradient(90deg, #21bdd1, #f8e0e0, #ffffff, transparent);
-}
-
 @keyframes animate {
     0% {
         transform: rotate(315deg) translateX(0);
@@ -80,122 +77,6 @@ span::before {
         transform: rotate(315deg) translateX(-1500px);
         opacity: 0;
     }
-}
-
-/* Only keeping span:nth-child(1-13) since they are referenced */
-span:nth-child(1) {
-    top: 0;
-    right: 0;
-    left: initial;
-    animation-delay: 0;
-    animation-duration: 1s;
-}
-span:nth-child(2) {
-    top: 0;
-    right: 80px;
-    left: initial;
-    animation-delay: 0.2s;
-    animation-duration: 3s;
-}
-span:nth-child(3) {
-    top: 80px;
-    right: 0px;
-    left: initial;
-    animation-delay: 0.4s;
-    animation-duration: 10s;
-}
-span:nth-child(4) {
-    top: 0;
-    right: 180px;
-    left: initial;
-    animation-delay: 0.6s;
-    animation-duration: 1.5s;
-}
-span:nth-child(5) {
-    top: 0;
-    right: 400px;
-    left: initial;
-    animation-delay: 0.8s;
-    animation-duration: 2.5s;
-}
-span:nth-child(6) {
-    top: 0;
-    right: 600px;
-    left: initial;
-    animation-delay: 1s;
-    animation-duration: 3s;
-}
-span:nth-child(7) {
-    top: 300px;
-    right: 0px;
-    left: initial;
-    animation-delay: 1s;
-    animation-duration: 1.75s;
-}
-span:nth-child(8) {
-    top: 1000px;
-    right: 700px;
-    left: initial;
-    animation-delay: 1.4s;
-    animation-duration: 5.25s;
-}
-span:nth-child(9) {
-    top: 1000px;
-    right: 100px;
-    left: initial;
-    animation-delay: 0.75s;
-    animation-duration: 2.25s;
-}
-span:nth-child(10) {
-    top: 1000px;
-    right: 700px;
-    left: initial;
-    animation-delay: 2.75s;
-    animation-duration: 2.25s;
-}
-span:nth-child(11) {
-    top: 1000px;
-    right: 1000px;
-    left: initial;
-    animation-delay: 5s;
-    animation-duration: 10s;
-}
-span:nth-child(12) {
-    top: 1000px;
-    right: 1000px;
-    left: initial;
-    animation-delay: 1s;
-    animation-duration: 8s;
-}
-span:nth-child(13) {
-    top: 500px;
-    right: 10px;
-    left: initial;
-    animation-delay: 1s;
-    animation-duration: 4.75s;
-}
-
-body {
-    font-family: "Courier New", Courier, monospace;
-    background: linear-gradient(90deg, #080e49 0%, #1f1b55 100%);
-    animation: gradientAnimation 8s infinite alternate;
-
-    @keyframes gradientAnimation {
-        0% {
-            background: linear-gradient(90deg, #080e49 0%, #1f1b55 100%);
-        }
-
-        50% {
-            background: linear-gradient(90deg, #1f1b55 0%, #080e49 100%);
-        }
-
-        100% {
-            background: linear-gradient(90deg, #080e49 0%, #1f1b55 100%);
-        }
-    }
-
-    background-size: 200% 200%;
-    margin: 20px;
 }
 
 .top-left-image {
@@ -233,12 +114,12 @@ body {
     text-align: left;
     color: #ffffff;
     background: fixed;
-    background-color: rgb(4, 11, 24);
+    background: linear-gradient(60deg, #020416 50%, #181633 100%);
     padding-top: 10px;
     padding-left: 10px;
     padding-right: 5px;
     font-family: "Courier New", Courier, monospace;
-    border: 2px solid #040211;
+    border: 2px solid #a725e4;
     border-radius: 0px;
     width: 260px;
     font-size: 14px;
@@ -436,7 +317,7 @@ body {
     position: fixed;
     bottom: 10px;
     right: 10px;
-    background-color: #1e1e1e;
+    background: linear-gradient(60deg, #020416 50%, #181633 100%);
     color: #60dee7;
     padding: 10px;
     border: 2px solid #983af0;
