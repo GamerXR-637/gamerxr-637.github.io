@@ -10,7 +10,7 @@ const originalFavicon = document.querySelector("link[rel~='icon']");
 let originalFaviconHref = originalFavicon ? originalFavicon.href : null;
 
 window.addEventListener('blur', () => {
-    document.title = "_gamerxr.637_ || :)";
+    document.title = "_gamerxr.637_ Profile || :(";
 });
 
 window.addEventListener('focus', () => {
@@ -57,12 +57,14 @@ function activateKonamiCode() {
     }
 }
 
-// Redirect to t.html when user presses the "t" key
+
 document.addEventListener('keydown', (event) => {
     const key = event.key.toLowerCase();
     if (key === 't') {
         window.location.href = 'tetris.html';
     } else if (key === 's') {
         window.location.href = 'writings.html';
+    } else if (key === 'n') {
+        window.location.href = 'https://gamerxr637.is-a.dev/GuessTheNumber/';
     }
 });
