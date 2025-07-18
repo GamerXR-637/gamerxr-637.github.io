@@ -7,15 +7,38 @@ body {
         #ffb347 80%,
         #ffe29f 100%
     );
-    color: #fff;
     font-family: 'Segoe UI', Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     position: relative;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-bottom: 100px;
+    padding-top: 60px; /* Pushes content down from under the fixed banner */
+}
+
+
+footer {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 14px;
+    color: #ffffff;
+    z-index: 1000;
+    color: white;
+}
+
+footer a {
+    color: #21bdd1;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: #ffffff;
 }
 
 body::after {
@@ -27,11 +50,28 @@ body::after {
     height: 35vh;
     background: linear-gradient(to top, #2d1e60 90%, transparent 100%);
     clip-path: polygon(
-        0% 100%, 10% 80%, 20% 85%, 30% 70%, 40% 80%, 
+        0% 100%, 15% 80%, 20% 85%, 30% 70%, 40% 80%, 
+        50% 60%, 60% 75%, 70% 65%, 80% 80%, 90% 70%, 100% 100%
+    );
+    z-index: 2;
+    pointer-events: none;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 35vh;
+    background: linear-gradient(to top, #2d1383 90%, transparent 100%);
+    clip-path: polygon(
+        0% 100%, 15% 80%, 20% 85%, 30% 70%, 40% 80%, 
         50% 60%, 60% 75%, 70% 65%, 80% 80%, 90% 70%, 100% 100%
     );
     z-index: 1;
     pointer-events: none;
+    transform: translateX(15px);
 }
 
 .button:hover, button:hover {
@@ -50,13 +90,27 @@ button {
     transition: background-color 0.3s ease;
     margin-top: 0;
     margin-bottom: 20px;
-    position: absolute;
+    position: fixed;
     top: 30px;
     right: 30px;
     left: auto;
     transform: none;
     z-index: 1100;
     
+}
+
+para {
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    text-align: left;
+    margin-top: 20px;
+    max-width: 600px;
+    width: 600px;
+    background-color: rgba(45, 30, 96, 0.9); /* Deep Cosmic Purple */
+    padding: 20px;
+    white-space: pre-line;
+    border-radius: 3px;
+    overflow-wrap: break-word;
 }
 
 .coming-soon-container {
@@ -72,7 +126,6 @@ button {
 
 .coming-soon-text {
     font-size: 1.2rem;
-    color: #bbbbbb;
 }
 
 .banner {
