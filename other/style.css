@@ -383,3 +383,31 @@ scp a:hover {
     ;
 }
 
+.text {
+    position: fixed;
+    top: 30px;
+    right: 20px;
+    color: #ffffff;
+    font-size: 15px;
+    font-family: "Courier New", Courier, monospace;
+    width: 210px;
+    background-color: #1e1e1e;
+    height: fit-content;
+    margin-top: 10px;
+    margin: 10px;
+    border: 2px solid #21bdd1;
+    padding: 10px;
+    line-height: 20px;
+    text-align: center;
+    font-size: smaller;
+    box-shadow: #983af0 0px 0px 20px;
+}
+.text a {
+    color: #6adcee;
+    text-decoration: none;
+    align-items: center;
+}
+.text a:hover {
+    text-decoration: underline;
+    color: #e42584;
+}
