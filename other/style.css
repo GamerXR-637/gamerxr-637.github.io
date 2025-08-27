@@ -158,6 +158,15 @@ section {
     padding-left: 20px;
 }
 
+.terminal-box pre {
+    color: #e42584;
+    font-size: 15px;
+    padding-left: 20px;
+    white-space: pre-wrap;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
 .terminal-box h1 {
     text-align: center;
         text-shadow:
@@ -171,17 +180,17 @@ section {
     letter-spacing: 2px;
 }
 
-code {
-    font-family: "Courier New", Courier, monospace;
-    color: #e42584;
-}
-
-color1 {
-    color: #21bdd1;
-}
-
-color2 {
-    color: #0265b7
+.terminal-box h2 {
+    text-align: center;
+        text-shadow:
+        0 0 5px #4721d1,
+        0 0 10px #cb21d1,
+        0 0 20px #21bdd1,
+        0 0 40px #2141d1,
+        0 0 80px #d12156;
+    font-weight: bold;
+    text-decoration: wavy;
+    letter-spacing: 2px;
 }
 
 .projects {
@@ -356,18 +365,22 @@ body {
     box-shadow: #983af0 0px 0px 20px;
 }
 
-.text a {
+k a {
     color: #6adcee;
     text-decoration: none;
     align-items: center;
 }
 
-.text a:hover {
+k a:hover {
     text-decoration: underline;
     color: #e42584;
 }
+color {
+    color: #6adcee;
+}
 
-.scp {
+
+/* scp {
     width: 804px;
     height: auto;
     position: absolute;
@@ -382,7 +395,7 @@ body {
     white-space: pre-wrap;
     overflow-wrap: break-word;
     box-shadow: #ffffff 0px 0px 20px;
-}
+} */
 
 .scp h2 {
     text-align: center;
@@ -397,8 +410,7 @@ body {
     letter-spacing: 2px;
     line-height: normal;
 }
-
-.scp a {
+scp a {
     color: #6adcee;
     text-decoration: none;
     align-items: center;
@@ -409,8 +421,7 @@ body {
     0 0 20px #ffffff
     ;
 }
-
-.scp a:hover {
+scp a:hover {
     text-decoration: underline;
     color: #e42584;
     text-shadow: 

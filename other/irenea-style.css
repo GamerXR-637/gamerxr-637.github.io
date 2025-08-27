@@ -74,30 +74,6 @@ body::before {
     transform: translateX(15px);
 }
 
-.button:hover, button:hover {
-    background: rgba(255, 255, 255, 0.295);
-}
-
-button {
-    background-color: transparent ;
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    width: 100px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-    margin-top: 0;
-    margin-bottom: 20px;
-    position: fixed;
-    top: 30px;
-    right: 30px;
-    left: auto;
-    transform: none;
-    z-index: 1100;
-    
-}
 
 para {
     color: rgb(255, 255, 255);
