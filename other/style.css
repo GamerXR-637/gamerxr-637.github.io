@@ -370,8 +370,7 @@ scp a {
     0 0 5px#2141d1,
     0 0 10px #d12156,
     0 0 15px #a725e4,
-    0 0 20px #ffffff
-    ;
+    0 0 20px #ffffff;
 }
 scp a:hover {
     text-decoration: underline;
