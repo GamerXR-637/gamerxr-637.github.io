@@ -69,7 +69,7 @@ document.addEventListener('keydown', (event) => {
     }
 });
 
-const chars = "@cH(2LD9317oS2XO8Zb[T4d036%qT/WfwzBx8Gm&-9FV!iAE$kR1←N6^→rU}n↓KpuvΠh{#¯ΣCs)0aQe5—4j]l↑57g?M×y_IPJ";
+const chars = "@cH(2LD9317oS2XO8Zb[T4d036%qT/WfwzBx8G<m&-9FV!iAE$kR1←N6^→rU}n↓KpuvΠh{#¯ΣCs)0aQe5—4j]l↑57g?M×y_IPJ>";
 
 function getUniqueRandomIndices(length, count) {
     const indices = new Set();
@@ -175,3 +175,4 @@ document.addEventListener("DOMContentLoaded", function () {
     initAllGlitch();
     update();
 });
+
