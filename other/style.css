@@ -165,6 +165,15 @@ section {
     white-space: pre-wrap;
     word-break: keep-all;
     overflow-wrap: break-word;
+    animation: smooth-color-change 10s ease-in-out infinite;
+}
+
+@keyframes smooth-color-change {
+    0% { color: #e42584; }
+    25% { color: #6a73ee; }
+    50% { color: #636be6; }
+    75% { color: #983af0; }
+    100% { color: #e42584; }
 }
 
 .terminal-box h1 {
