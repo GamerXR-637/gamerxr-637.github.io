@@ -141,21 +141,27 @@ section {
     text-decoration: underline;
 }
 
-.terminal-box {
+.main-content {
     position: absolute;
     top: 50px;
-    left: 230px;
-    margin: 0px 90px;
+    left: 315px;
+    right: 20px;
+    white-space: pre-wrap;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+.terminal-box {
     background-color: #1c1c1c;
     color: #636be6;
     font-family: "Courier New", Courier, monospace;
     padding: 15px;
     border: 2px solid #21bdd1;
     border-radius: 0px;
-    width: 800px;
     height: auto;
     box-shadow: #4721d1 0px 0px 20px;
     padding-left: 20px;
+    width: 700px;
 }
 
 .terminal-box pre {
@@ -236,6 +242,61 @@ section {
 
 .projects a:hover {
     text-decoration: underline;
+    color: #e42584;
+}
+
+.image-box a {
+    color: #6adcee;
+    text-decoration: none;
+    align-items: center;
+    text-shadow: 
+    0 0 5px#2141d1,
+    0 0 10px #d12156,
+    0 0 15px #a725e4,
+    0 0 20px #ffffff;
+}
+.image-box a:hover {
+    text-decoration: underline;
+    color: #e42584;
+    text-shadow: 
+    0 0 5px #2141d1,
+    0 0 10px #d12156,
+    0 0 15px #a725e4,
+    0 0 20px #ffffff
+    ;
+}
+
+.image-box {
+    display: flex;
+    flex-direction: column;
+    background-color: #1c1c1c;
+    padding: 15px;
+    border: 2px solid #21bdd1;
+    box-shadow: #4721d1 0px 0px 20px;
+    width: 700px;
+    margin-top: 20px;
+}
+
+.image-box-entry {
+    display: flex;
+    align-items: center;
+    word-break: keep-all;
+}
+
+.image-box-entry:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.image-box img {
+    display: block;
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+    border: 2px solid aquamarine;
+    box-sizing: border-box;
+}
+
+.image-box-text {
     color: #e42584;
 }
 

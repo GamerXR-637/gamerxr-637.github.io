@@ -176,3 +176,8 @@ document.addEventListener("DOMContentLoaded", function () {
     update();
 });
 
+function navigateToWebsite(url) {
+    if (url && url !== "Links") {
+        window.open(url, '_blank');
+    }
+}
