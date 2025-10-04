@@ -177,7 +177,54 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function navigateToWebsite(url) {
-    if (url && url !== "Links") {
-        window.open(url, '_blank');
+    if (!url || url === "Links") return;
+
+    // If url starts with 'replace:' we'll replace the top-left image instead of navigating
+    if (url.startsWith('replace:')) {
+        // format: replace:src|optional alt text
+        const payload = url.slice('replace:'.length);
+        const [src, alt] = payload.split('|');
+        const img = document.querySelector('.top-left-image');
+        if (img) {
+            img.src = src;
+            if (alt !== undefined) img.alt = alt;
+        }
+        return;
     }
+
+    window.open(url, '_blank');
 }
+
+/**
+ * Swaps an image's source with a fade effect.
+ * @param {HTMLImageElement} img The image element to swap.
+ * @param {string} newSrc The new image source URL.
+ * @param {string} [newAlt] The new alt text for the image.
+ */
+function swapImageWithFade(img, newSrc, newAlt) {
+    if (!img) return;
+    // Smooth fade-out -> change -> fade-in
+    img.style.transition = 'opacity 300ms ease';
+    img.style.opacity = '0';
+    setTimeout(() => {
+        img.src = newSrc;
+        if (newAlt !== undefined) img.alt = newAlt;
+        img.style.opacity = '1';
+    }, 310);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    // --- Randomly swap the main avatar ---
+    const mainAvatarChance = 0.05;
+    if (Math.random() < mainAvatarChance) {
+        const mainAvatar = document.querySelector('.top-left-image');
+        const avatarPool = [
+            'other/axvill.png',
+            'other/bamboo.png',
+            'other/gac.png',
+            'other/image.png'
+        ];
+        const choice = avatarPool[Math.floor(Math.random() * avatarPool.length)];
+        swapImageWithFade(mainAvatar, choice);
+    }
+});

@@ -114,7 +114,7 @@ section {
     text-align: left;
     color: #ffffff;
     background: fixed;
-    background: linear-gradient(60deg, #020416 50%, #181633 100%);
+    background: linear-gradient(60deg,#080f498a 25%, #020416 70%, #181633 100%);
     padding-top: 10px;
     padding-left: 10px;
     padding-right: 5px;
@@ -396,15 +396,138 @@ body {
     position: fixed;
     bottom: 10px;
     right: 10px;
-    background: linear-gradient(60deg, #020416 50%, #29255e 100%);
-    color: #60dee7;
+    background: linear-gradient(60deg, #510d53 20%, #020416 50%, #29255e 100%);
+    color: #0daeb9;
     padding: 10px;
-    border: 2px solid #983af0;
+    border: 3px solid #d12156;
     font-family: "Courier New", Courier, monospace;
     z-index: 1000;
     width: auto;
     box-shadow: #ffffff 0px 0px 20px;
 }
+
+/* Responsive tweaks for tablets and phones */
+@media (max-width: 900px) {
+    body {
+        margin: 10px;
+    }
+
+    .banner {
+        font-size: 13px;
+        padding: 6px 4px;
+    }
+
+    /* Make profile and related boxes flow instead of being fixed */
+    .top-left-image,
+    .below-image-text,
+    .below-image-image,
+    .link-selector,
+    .footer,
+    .text {
+        position: static;
+        left: auto;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        width: auto;
+        margin: 8px auto;
+        display: block;
+    }
+
+    .top-left-image {
+        width: 140px;
+        height: auto;
+        display: block;
+        margin-top: 8px;
+        box-shadow: #e42584 0px 0px 12px;
+    }
+
+    .below-image-text {
+        width: calc(100% - 40px);
+        font-size: 14px;
+        padding: 8px;
+        box-shadow: #4721d1 0px 0px 12px;
+    }
+
+    .below-image-image {
+        width: 160px;
+        height: auto;
+        display: block;
+        margin: 6px auto 16px auto;
+    }
+
+    .main-content {
+        position: static;
+        left: auto;
+        right: auto;
+        top: auto;
+        margin: 6px auto;
+        padding: 6px;
+        max-width: 95%;
+    }
+
+    .terminal-box,
+    .image-box,
+    .projects,
+    .custom-paragraph,
+    .para {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 12px;
+    }
+
+    .image-box-entry {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .image-box img {
+        width: 88px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .footer {
+        border-radius: 6px;
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+        justify-content: space-between;
+        width: calc(100% - 20px);
+    }
+
+    .text {
+        width: calc(100% - 40px);
+        text-align: center;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+    .top-left-image {
+        width: 110px;
+    }
+
+    .terminal-box pre {
+        font-size: 14px;
+        padding-left: 8px;
+    }
+
+    .terminal-box h1,
+    .terminal-box h2 {
+        font-size: 18px;
+    }
+
+    .banner {
+        font-size: 12px;
+    }
+}
+
 
 .link-selector select {
     background-color: #1e1e1e;
@@ -461,7 +584,7 @@ scp a:hover {
     font-size: 15px;
     font-family: "Courier New", Courier, monospace;
     width: 210px;
-    background-color: #1e1e1e;
+    background: linear-gradient(60deg, #080f498a 25%, #27074dd5 70%, #181449bd);
     height: fit-content;
     margin-top: 10px;
     margin: 10px;
@@ -481,3 +604,4 @@ scp a:hover {
     text-decoration: underline;
     color: #e42584;
 }
+
