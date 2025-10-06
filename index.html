@@ -16,6 +16,22 @@
     <meta name="author" content="_gamerxr.637_">
     <meta name="keywords" content="developer, creative writing, portfolio, gamerxr, minecraft, scp, 637, noob dev, ambient music, ambient, music, python, javascript, html, css, high school developer">
     <meta name="theme-color" content="#3a2d6b">
+    <script>
+        (function(){
+            // Pick a random hex color and apply it to the theme-color meta tag
+            const meta = document.querySelector('meta[name="theme-color"]');
+            function randHex(){
+                return '#'+Math.floor(Math.random()*16777215).toString(16).padStart(6,'0');
+            }
+            if(meta){
+                meta.setAttribute('content', randHex());
+                // When the page becomes visible again, pick a new color (optional)
+                document.addEventListener('visibilitychange', () => {
+                    if(document.visibilityState === 'visible') meta.setAttribute('content', randHex());
+                });
+            }
+        })();
+    </script>
 </head>
 
 <body>
