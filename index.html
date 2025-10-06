@@ -15,20 +15,33 @@
     <meta property="og:image:height" content="650" />
     <meta name="author" content="_gamerxr.637_">
     <meta name="keywords" content="developer, creative writing, portfolio, gamerxr, minecraft, scp, 637, noob dev, ambient music, ambient, music, python, javascript, html, css, high school developer">
-    <meta name="theme-color" content="<?php echo $randomColor; ?>">
+    <meta name="theme-color" content="#080e49">
     <script>
         (function(){
-            // Pick a random hex color and apply it to the theme-color meta tag
-            const meta = document.querySelector('meta[name="theme-color"]');
-            function randHex(){
-                return '#'+Math.floor(Math.random()*16777215).toString(16).padStart(6,'0');
+            // Ensure a meta[name="theme-color"] exists, then set it according to prefers-color-scheme
+            const metaName = 'theme-color';
+            let meta = document.querySelector('meta[name="' + metaName + '"]');
+            if(!meta){
+                meta = document.createElement('meta');
+                meta.setAttribute('name', metaName);
+                document.head.appendChild(meta);
             }
-            if(meta){
-                meta.setAttribute('content', randHex());
-                // When the page becomes visible again, pick a new color (optional)
-                document.addEventListener('visibilitychange', () => {
-                    if(document.visibilityState === 'visible') meta.setAttribute('content', randHex());
-                });
+
+            const darkColor = '#121212';
+            const lightColor = '#ffffff';
+
+            function applyColor(isDark){
+                meta.setAttribute('content', isDark ? darkColor : lightColor);
+            }
+
+            const mq = window.matchMedia('(prefers-color-scheme: dark)');
+            applyColor(mq.matches);
+
+            // Listen for changes to the preference (supports both modern and older browsers)
+            if (typeof mq.addEventListener === 'function') {
+                mq.addEventListener('change', e => applyColor(e.matches));
+            } else if (typeof mq.addListener === 'function') {
+                mq.addListener(e => applyColor(e.matches));
             }
         })();
     </script>
@@ -228,5 +241,4 @@ Most of my works and writing are under <scp><a href="https://creativecommons.org
 <!--
 Hahah what are you doing here? well thanks for checking out the code
 Meow hahah 
-
 -->
