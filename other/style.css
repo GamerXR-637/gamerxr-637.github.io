@@ -7,26 +7,24 @@
 body {
     font-family: "Courier New", Courier, monospace;
     padding-bottom: 20px;
-    font-family: "Courier New", Courier, monospace;
     background: linear-gradient(90deg, #080e49 0%, #1f1b55 100%);
-    animation: gradientAnimation 8s infinite alternate;
-
-    @keyframes gradientAnimation {
-        0% {
-            background: linear-gradient(90deg, #080e49 0%, #1f1b55 100%);
-        }
-
-        50% {
-            background: linear-gradient(90deg, #1f1b55 0%, #080e49 100%);
-        }
-
-        100% {
-            background: linear-gradient(90deg, #080e49 0%, #1f1b55 100%);
-        }
-    }
-
+    animation: fadeIn 1s ease-in-out, gradientAnimation 8s infinite alternate;
     background-size: 200% 200%;
     margin: 20px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
 }
 
 section {
@@ -604,4 +602,3 @@ scp a:hover {
     text-decoration: underline;
     color: #e42584;
 }
-

@@ -228,20 +228,3 @@ document.addEventListener('DOMContentLoaded', () => {
         swapImageWithFade(mainAvatar, choice);
     }
 });
-
-function generateRandomColor() {
-  const randomColor = Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
-  return `#${randomColor}`;
-}
-
-// Get the meta tag.
-const themeMetaTag = document.querySelector('meta[name="theme-color"]');
-
-// Generate a new random color.
-const newColor = generateRandomColor();
-
-// Update the content attribute.
-if (themeMetaTag) {
-  themeMetaTag.setAttribute('content', newColor);
-}
-
