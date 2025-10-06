@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>_gamerxr.637_ Guestbook|| :)</title>
+    <link rel="icon" href="other/image.png" type="image/x-icon">
+    <meta property="og:title" content="GamerXR-637 Guestbook || :)" />
+    <meta property="og:url" content="https://gamerxr637.is-a.dev/guestbook.html" />
+    <meta property="og:description" content="Guestbook of _gamerxr.637_" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://github.com/GamerXR-637/gamerxr-637.github.io/blob/1c6aa5c2d2da13442bcf826e485d329b48a3e7ff/other/image.png?raw=true" />
+    <meta property="og:image:width" content="650" />
+    <meta property="og:image:height" content="650" />
+    <meta name="author" content="_gamerxr.637_">
+    <meta name="keywords" content="developer, creative writing, portfolio, gamerxr, minecraft, scp, 637, noob dev, ambient music, ambient, music, python, javascript, html, css, high school developer">
+    <meta name="theme-color" content="#080e49">
+    <style>
+        /* Page base */
+        body {
+            background-color: #080e49;
+            /* fallback */
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            position: relative;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Animated background layer: fixed behind content so only the background animates */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            /* top:0; right:0; bottom:0; left:0 */
+            background-image: url('other/bg0.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            transform-origin: center;
+            z-index: -1;
+            /* keep behind page content */
+            will-change: transform;
+            animation: animateBg 50s linear infinite;
+            filter: saturate(0.9) contrast(0.95);
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            /* ensure stacking above pseudo-element */
+            z-index: 0;
+            background: rgba(0, 0, 0, 0.15);
+            /* subtle overlay to improve contrast */
+            border-radius: 8px;
+            padding: 24px;
+            box-sizing: border-box;
+        }
+
+        @keyframes animateBg {
+            0% {
+                transform: scale(1) translateZ(0);
+            }
+
+            30% {
+                transform: scale(1.12) translateZ(0);
+            }
+
+            50% {
+                transform: scale(1.08) translateZ(0);
+            }
+
+            70% {
+                transform: scale(1.12) translateZ(0);
+            }
+
+            100% {
+                transform: scale(1) translateZ(0);
+            }
+        }
+
+        /* Respect reduced motion preferences */
+        @media (prefers-reduced-motion: reduce) {
+            body::before {
+                animation: none;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Guestbook</h1>
+        <p>Welcome — leave a message below.</p>
+
+        <!-- Giscus will mount inside this container -->
+        <div id="giscus-container"></div>
+
+        <script src="https://giscus.app/client.js" data-repo="GamerXR-637/guestbook" data-repo-id="R_kgDOP9hNaw" data-category="General" data-category-id="DIC_kwDOP9hNa84CwVQ3" data-mapping="pathname" data-strict="0" data-reactions-enabled="0"
+            data-emit-metadata="0" data-input-position="top" data-theme="purple_dark" data-lang="en" crossorigin="anonymous" async>
+            </script>
+    </main>
+
+</body>
+
+</html>
