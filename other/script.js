@@ -226,5 +226,15 @@ document.addEventListener('DOMContentLoaded', () => {
         ];
         const choice = avatarPool[Math.floor(Math.random() * avatarPool.length)];
         swapImageWithFade(mainAvatar, choice);
+    } else if (Math.random() > 0.5) {
+        const mainAvatar = document.querySelector('.top-left-image');
+        const mainavatarPool = [
+            'other/glitch-pfp-rgb.png',
+            'other/more-glitch-pfp-rgb.png',
+            'other/new-pfp-axvill0.png'
+        ];
+        const choice = mainavatarPool[Math.floor(Math.random() * mainavatarPool.length)];
+        swapImageWithFade(mainAvatar, choice);
     }
 });
+
