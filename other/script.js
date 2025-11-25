@@ -226,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ];
         const choice = avatarPool[Math.floor(Math.random() * avatarPool.length)];
         swapImageWithFade(mainAvatar, choice);
-    } else if (Math.random() >= 0.4) {
+    } else if (Math.random() >= 0.1) { // INCREASED CHANCE: Changed 0.4 to 0.1
         const ymainAvatar = document.querySelector('.top-left-image');
         const mainavatarPool = [
             'other/glitch-pfp-rgb.png',
@@ -236,6 +236,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const mchoice = mainavatarPool[Math.floor(Math.random() * mainavatarPool.length)];
         swapImageWithFade(ymainAvatar, mchoice);
     }
+}
 });
+
 
 
