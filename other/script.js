@@ -236,8 +236,4 @@ document.addEventListener('DOMContentLoaded', () => {
         const mchoice = mainavatarPool[Math.floor(Math.random() * mainavatarPool.length)];
         swapImageWithFade(ymainAvatar, mchoice);
     }
-}
 });
-
-
-
