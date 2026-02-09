@@ -89,3 +89,18 @@ body {
     padding: 10px;
     border: 5px solid blue;
 }
+
+.button {
+    align-items: center;
+    background-color: #00e0ff;
+    border: 3px solid blue;
+    color: #003d5c;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
