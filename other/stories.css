@@ -89,7 +89,7 @@ body {
 }
 
 .read-more:hover {
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(0, 212, 255, 0.2);
     transform: translateX(5px);
 }
 
@@ -115,6 +115,24 @@ body {
     margin: 10px 2px;
     cursor: pointer;
     transition: all 0.3s ease;
+
+}
+
+.button:hover {
+    align-items: center;
+    background-color: #243447;
+    border: 3px solid #0400ff;
+    color: #e0e0e0;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transform: translateY(-8px) translateX(-8px);
+    box-shadow: 0 12px 24px rgba(0, 212, 255, 0.4);
 }
 
 .nav-buttons {
