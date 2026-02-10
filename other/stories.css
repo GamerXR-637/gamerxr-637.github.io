@@ -1,22 +1,16 @@
 body {
-    background: linear-gradient(135deg, #0a0e27, #16213e);
+    background: linear-gradient(135deg, rgba(0, 134, 196, 0.33), rgba(157, 0, 255, 0.4)), url('./bg0.jpg');
+    background-position: center;
+    background-size: cover;
     margin: 0;
     padding: 0;
-    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     min-height: 100vh;
     padding-top: 20px;
     font-family: "Kalam", cursive;
     font-weight: 400;
     font-style: normal;
-    color: white;
+    color: rgb(0, 204, 255);
 }
-
-/* .lilex-<uniquifier> {
-  font-family: "Lilex", monospace;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-} */
 
 .container {
     max-width: 1200px;
@@ -64,7 +58,7 @@ body {
 }
 
 .story-excerpt {
-    color: #b0b0b0;
+    color: #00d9d9;
     font-size: 1em;
     line-height: 1.6;
     margin: 0 0 15px 0;
@@ -120,8 +114,8 @@ body {
 
 .button:hover {
     align-items: center;
-    background-color: #243447;
-    border: 3px solid #0400ff;
+    background-color: #244347;
+    border: 3px solid #0098a9;
     color: #e0e0e0;
     padding: 10px 20px;
     text-align: center;
@@ -159,24 +153,4 @@ a:hover {
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
-}
-
-.gradient-box {
-  width: 100%;
-  height: 300px;
-  background: linear-gradient(-45deg, #071026, #0b1226, #10203a, #1a2a48);
-  background-size: 400% 400%;
-  animation: gradientBG 20s ease infinite;
-}
-
-@keyframes gradientBG {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }

@@ -213,20 +213,20 @@ function swapImageWithFade(img, newSrc, newAlt) {
     }, 310);
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    // --- Randomly swap the main avatar ---
-    const mainAvatarChance = 0.05;
-    if (Math.random() < mainAvatarChance) {
-        const mainAvatar = document.querySelector('.top-left-image');
-        const avatarPool = [
-            'other/axvill.png',
-            'other/bamboo.png',
-            'other/gac.png',
-            'other/image.png'
-        ];
-        const choice = avatarPool[Math.floor(Math.random() * avatarPool.length)];
-        swapImageWithFade(mainAvatar, choice);
-    } // else if (Math.random() >= 0.1) { // INCREASED CHANCE: Changed 0.4 to 0.1
+// document.addEventListener('DOMContentLoaded', () => {
+//     // --- Randomly swap the main avatar ---
+//     const mainAvatarChance = 0.05;
+//     if (Math.random() < mainAvatarChance) {
+//         const mainAvatar = document.querySelector('.top-left-image');
+//         const avatarPool = [
+//             'other/axvill.png',
+//             'other/bamboo.png',
+//             'other/gac.png',
+//             'other/image.png'
+//         ];
+//         const choice = avatarPool[Math.floor(Math.random() * avatarPool.length)];
+//         swapImageWithFade(mainAvatar, choice);
+//     } // else if (Math.random() >= 0.1) { // INCREASED CHANCE: Changed 0.4 to 0.1
     //     const ymainAvatar = document.querySelector('.top-left-image');
     //     const mainavatarPool = [
     //         'other/glitch-pfp-rgb.png',
@@ -236,5 +236,5 @@ document.addEventListener('DOMContentLoaded', () => {
     //     const mchoice = mainavatarPool[Math.floor(Math.random() * mainavatarPool.length)];
     //     swapImageWithFade(ymainAvatar, mchoice);
     // }
-});
+// });
 
