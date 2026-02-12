@@ -11,9 +11,9 @@ pre {
     width: max-content + 10px;
     margin: 0 auto;
     text-align: center;
-    /* border: 1px solid #6a4c93; */
-    /* background-color: rgba(30, 20, 60, 0.7); */
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    text-shadow: 
+        2px 2px 8px rgba(0, 0, 0, 0.8),
+        3px 3px 9px rgba(0, 153, 255, 0.8);
     color: #d0d8ff;
     word-wrap: break-word;
     overflow-wrap: break-word;
@@ -23,4 +23,42 @@ h1 {
     text-align: center;
     color: #c0b0ff;
     text-shadow: 3px 3px 10px rgba(50, 20, 100, 0.9);
+}
+
+.button {
+    align-items: center;
+    background-color: #243447;
+    border: 3px solid #00d4ff;
+    color: #e0e0e0;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+
+.button:hover {
+    align-items: center;
+    background-color: #244347;
+    border: 3px solid #0098a9;
+    color: #e0e0e0;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transform: translateY(-8px) translateX(-8px);
+    box-shadow: 0 12px 24px rgba(0, 212, 255, 0.4);
+}
+
+.nav-buttons {
+    text-align: center;
+    margin-top: 20px;
 }
