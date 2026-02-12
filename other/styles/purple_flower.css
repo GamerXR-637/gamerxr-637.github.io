@@ -1,0 +1,26 @@
+body {
+    background: linear-gradient(135deg, rgba(10, 20, 50, 0.9), rgba(30, 10, 60, 0.85));
+    font-family: "Kalam", cursive;
+    font-size: 20px;
+    margin-top: 20px;
+    color: #e0e0ff;
+}
+
+pre {
+    display: block;
+    width: max-content + 10px;
+    margin: 0 auto;
+    text-align: center;
+    /* border: 1px solid #6a4c93; */
+    /* background-color: rgba(30, 20, 60, 0.7); */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    color: #d0d8ff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+h1 {
+    text-align: center;
+    color: #c0b0ff;
+    text-shadow: 3px 3px 10px rgba(50, 20, 100, 0.9);
+}
