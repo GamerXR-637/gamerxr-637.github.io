@@ -20,7 +20,7 @@
 <meta name="theme-color" content="#7851A9">
 
 <body>
-<h1>Purple Flower</h1>
+<h1>The Purple Flower</h1>
     <div class = "nav-buttons">
         <button class="button" onclick="window.location.href='../index.html'"><-- Back to Home</button>
         <button class="button" onclick="window.location.href='../stories.html'" style = "margin-left: 20px;"><-- Stories Portal</button>
@@ -131,5 +131,22 @@ The Purple Flower
 Wake up
 
 </pre>
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p>Copyright © <span class="year"></span> GamerXR-637. Content licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/" rel="license">Creative Commons Attribution-NonCommercial 4.0 International</a>.</p>
+            Power by Github Pages and <a href="https://is-a.dev" target="_blank" rel="noopener">is-a.dev</a></p>
+            <p><a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" style="border-style: none;" /></a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var y = new Date().getFullYear();
+            var el = document.querySelector('.site-footer .year');
+            if (el) el.textContent = y;
+        });
+    </script>
+
 </body>
+
 </head>
