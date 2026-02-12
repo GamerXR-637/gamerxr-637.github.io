@@ -1,28 +1,37 @@
+* { box-sizing: border-box; }
+
 body {
     background: linear-gradient(135deg, rgba(10, 20, 50, 0.9), rgba(30, 10, 60, 0.85));
     font-family: "Kalam", cursive;
-    font-size: 20px;
-    margin-top: 20px;
+    font-size: clamp(16px, 4vw, 20px);
+    margin: 0.8rem 0 2rem 0;
     color: #e0e0ff;
+    padding: 0 1rem;
 }
 
 pre {
     display: block;
-    width: max-content + 10px;
-    margin: 0 auto;
-    text-align: center;
-    text-shadow: 
+    max-width: 92%;
+    margin: 0.8rem auto;
+    text-align: left;
+    text-shadow:
         2px 2px 8px rgba(0, 0, 0, 0.8),
         3px 3px 9px rgba(0, 153, 255, 0.8);
     color: #d0d8ff;
+    white-space: pre-wrap;
     word-wrap: break-word;
-    overflow-wrap: break-word;
+    overflow-wrap: anywhere;
+    overflow-x: auto;
+    padding: 0.75rem;
+    line-height: 1.5;
 }
 
 h1 {
     text-align: center;
     color: #c0b0ff;
     text-shadow: 3px 3px 10px rgba(50, 20, 100, 0.9);
+    font-size: clamp(1.4rem, 5vw, 2rem);
+    margin-top: 0.8rem;
 }
 
 .button {
@@ -30,35 +39,38 @@ h1 {
     background-color: #243447;
     border: 3px solid #2d00a9;
     color: #e0e0e0;
-    padding: 10px 20px;
+    padding: 10px 18px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    margin: 10px 2px;
+    font-size: 1rem;
+    margin: 10px 6px;
     cursor: pointer;
-    transition: all 0.3s ease;
-
+    transition: all 0.2s ease;
+    border-radius: 6px;
 }
 
 .button:hover {
-    align-items: center;
     background-color: #244347;
-    border: 3px solid #2d00a9;
-    color: #e0e0e0;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 10px 2px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    transform: translateY(-8px) translateX(-8px);
-    box-shadow: 0 12px 24px rgba(76, 0, 255, 0.4);
+    box-shadow: 0 12px 24px rgba(76, 0, 255, 0.18);
+    transform: translateY(-6px) translateX(-6px);
 }
 
 .nav-buttons {
-    text-align: center;
-    margin-top: 20px;
+        text-align: center;
+        margin-top: 1rem;
+}
+
+/* Disable hover transforms on touch devices */
+@media (hover: none) {
+    .button:hover { transform: none; box-shadow: none; }
+}
+
+/* Small screens / phones */
+@media (max-width: 480px) {
+    body { font-size: clamp(14px, 4.5vw, 18px); padding: 0 0.6rem; }
+    pre { font-size: 0.98rem; padding: 0.6rem; max-width: 98%; }
+    .button { padding: 8px 12px; font-size: 0.95rem; margin: 8px 4px; }
+    h1 { font-size: 1.4rem; }
+    .nav-buttons { margin-top: 0.6rem; }
 }
