@@ -74,3 +74,20 @@ h1 {
     h1 { font-size: 1.4rem; }
     .nav-buttons { margin-top: 0.6rem; }
 }
+
+/* Footer specific styling for story pages */
+.site-footer {
+    background: rgba(0,0,0,0.45);
+    color: #e6faff;
+    padding: 18px 12px;
+    border-top: 2px solid rgba(0, 212, 255, 0.12);
+    font-size: 0.95rem;
+}
+.site-footer .footer-inner {
+    max-width: 980px;
+    margin: 0 auto;
+}
+.site-footer a { color: #99ecff; }
+.site-footer a:hover { color: #fb00ff; }
+.site-footer img { vertical-align: middle; margin-top: 6px; }
+.site-footer .year { font-weight: bold; }
