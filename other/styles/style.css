@@ -2,15 +2,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Kalam", cursive;
+
 }
 
 body {
-    font-family: "Courier New", Courier, monospace;
+
+    font-family: "Kalam", cursive;    
     padding-bottom: 20px;
     background: linear-gradient(90deg, #080e49 0%, #1f1b55 100%);
     animation: fadeIn 1s ease-in-out, gradientAnimation 8s infinite alternate;
     background-size: 200% 200%;
-    margin: 20px;
+    margin: 0;
 }
 
 @keyframes fadeIn {
@@ -94,7 +97,7 @@ section {
     left: 10px;
     color: #ffffff;
     font-size: 15px;
-    font-family: "Courier New", Courier, monospace;
+    font-family: "Kalam", cursive;
     width: 230px;
     background-color: #1e1e1e;
     height: fit-content;
@@ -116,7 +119,8 @@ section {
     padding-top: 10px;
     padding-left: 10px;
     padding-right: 5px;
-    font-family: "Courier New", Courier, monospace;
+
+    font-family: "Kalam", cursive;
     border: 2px solid #a725e4;
     border-radius: 0px;
     width: 260px;
@@ -152,7 +156,8 @@ section {
 .terminal-box {
     background-color: #1c1c1c;
     color: #636be6;
-    font-family: "Courier New", Courier, monospace;
+
+    font-family: "Kalam", cursive;
     padding: 15px;
     border: 2px solid #21bdd1;
     border-radius: 0px;
@@ -170,6 +175,7 @@ section {
     word-break: keep-all;
     overflow-wrap: break-word;
     animation: smooth-color-change 10s ease-in-out infinite;
+    
 }
 
 @keyframes smooth-color-change {
@@ -367,7 +373,7 @@ facts {
     color: #21bdd1;
     text-align: center;
     padding: 1px 0;
-    font-family: "Courier New", Courier, monospace;
+    font-family: "Kalam", cursive;
     font-size: 15px;
     border-bottom: 2px solid #21bdd1;
     z-index: 1000;
@@ -398,7 +404,8 @@ body {
     color: #0daeb9;
     padding: 10px;
     border: 3px solid #d12156;
-    font-family: "Courier New", Courier, monospace;
+    
+
     z-index: 1000;
     width: auto;
     box-shadow: #ffffff 0px 0px 20px;
@@ -532,7 +539,8 @@ body {
     color: #d121ba;
     border: 1px solid #e42584;
     padding: 5px;
-    font-family: "Courier New", Courier, monospace;
+    
+
     font-weight: bold;
 }
 
@@ -580,7 +588,9 @@ scp a:hover {
     right: 20px;
     color: #ffffff;
     font-size: 15px;
-    font-family: "Courier New", Courier, monospace;
+    
+    font-family: "Kalam", cursive;
+
     width: 210px;
     background: linear-gradient(60deg, #080f498a 25%, #27074dd5 70%, #181449bd);
     height: fit-content;
@@ -601,4 +611,7 @@ scp a:hover {
 .text a:hover {
     text-decoration: underline;
     color: #e42584;
+}
+.content {
+    font-family: "Kalam", cursive;
 }
