@@ -238,3 +238,5 @@ function swapImageWithFade(img, newSrc, newAlt) {
     // }
 // });
 
+
+
