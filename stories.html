@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
-
+   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stories || GamerXR-637</title>
-    <link rel="stylesheet" href="other/styles/stories.css">
+    <link rel="stylesheet" href="../stories/stories.css">
     <link rel="icon" href="other/writable_book.png" type="image/x-icon">
     <meta property="og:type" content="website" />
     <meta property="og:description" content="A place where my stories can be open and alive to the public! A libary to say!!" />
@@ -18,47 +13,51 @@
     <meta property="og:url" content="https://gamerxr637.is-a.dev/stories.html" />
     <meta property="og:image:width" content="630" />
     <meta property="og:image:height" content="630" />
-</head>
+      <!-- Preload media -->
+      <link rel="preload" as="image" href="other/bg.gif" type="image/gif">
+   </head>
+   <body >
+      <header>
+         <h1>stories!</h1>
+                 <p class="box">Some of the stories I've written and published on this website may contain elements that you might find disturbing or inappropriate. Names of places, characters, and events in these stories are fictional and any resemblance to real persons, living or dead, is purely coincidental. More details can be found in the individual story pages.</p>
 
-<body class = "gradient-box">
+         <hr>
+         <div class="nav">
+            <a class="link" href="index.html" >home</a> | 
+            <a class="link" href="guestbook.html">about</a>
+         </div>
+         <hr>
+      </header>
+      <main class="content" id="content">
 
-    
-    <div class="container">
-        <h1 class="stories-title">Stories</h1>
-        <p class="box">Some of the stories I've written and published on this website may contain elements that you might find disturbing or inappropriate. Names of places, characters, and events in these stories are fictional and any resemblance to real persons, living or dead, is purely coincidental. More details can be found in the individual story pages.</p>
-            <div class = "nav-buttons" style="padding-bottom: 100px;">
-                <button class="button" onclick="window.location.href='index.html'">Back to Home</button>
-                <button class="button" onclick="window.location.href='guestbook.html'" style = "margin-left: 20px;">Gestbook</button>
-            </div>
-
-        <div class="stories-grid">
+         
+         <div class="stories-grid">
             
             <div class="story-card">
-                <h2 class="story-title">Iren[e]a</h2>
+               <h2 class="story-title">Iren[e]a</h2>
                 <p class="story-excerpt">After the start of the plague she has to find the gods and to save the Mortals</p>
                 <p class="story-author">GamerXR-637, Yippie!, Axvill 0</p>
                 <p class="story-date">To be Decided</p>
                 <a href="stories/iren[e]a.html" class="read-more">Read</a>
+               </div>
+               
+               <div class="story-card">
+                  <h2 class="story-title">Purple Flower</h2>
+                  <p class="story-excerpt">The Purple Flower is filled with ideas that people add and is a symbol of death, life</p>
+                  <p class="story-author">GamerXR-637</p>
+                  <p class="story-date">February 10, 2026</p>
+                  <a href="stories/the_purple_flower.html" class="read-more">Read</a>
+               </div>
             </div>
-
-            <div class="story-card">
-                <h2 class="story-title">Purple Flower</h2>
-                <p class="story-excerpt">The Purple Flower is filled with ideas that people add and is a symbol of death, life</p>
-                <p class="story-author">GamerXR-637</p>
-                <p class="story-date">February 10, 2026</p>
-                <a href="stories/the_purple_flower.html" class="read-more">Read</a>
-            </div>
-    </div>
-
-</body>
-
-    <footer class="footer">
-        <p>&copy; <code id="copyright"></code>
+            
+          </main>
+      <footer class="footer">
+         <p>&copy; <code id="copyright"></code>
             <span>Made By _gamerxr.637_</span>
             <br><span>All Stories are under <a href="https://creativecommons.org/licenses/by-nc/4.0/" rel="license">Creative Commons Attribution-NonCommercial 4.0 International</a></span>
             <br>Power by Github Pages and is-a.dev</p>
-            <a href="https://is-a.dev" target="_blank" rel="noopener">is-a.dev</a>
-            <p><a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" style="border-style: none;" /></a></p>
-    </footer>
-
-</html>
+         <a href="https://is-a.dev" target="_blank" rel="noopener">is-a.dev</a>
+         <p><a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" style="border-style: none;" /></a></p>
+      </footer>
+      </body>
+   </html>
