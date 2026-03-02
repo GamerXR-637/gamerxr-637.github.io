@@ -1,20 +1,11 @@
 # About
 
-- Source Code is under CC0 1.0 Universal
+This repository contains content and source code for GamerXR-637's personal website. All code is released under the **CC0 1.0 Universal** license.
 
-## Credit
+<https://gamerxr637.is-a.dev/LICENCE.txt>
 
-### <a href="https://github.com/jakesgordon/javascript-tetris" target="_blank" rel="noopener">Tetris JS</a>
+## Story Licensing
 
-Made by <a href="https://github.com/jakesgordon/javascript-tetris" target="_blank" rel="noopener">jakesgordon</a>
+All stories published at [https://gamerxr637.is-a.dev/stories](https://gamerxr637.is-a.dev/stories) are licensed under the **Creative Commons Attribution-NonCommercial 4.0 International** license. You can view the full text in the `stories/LICENCE` file or at:
 
-- Details: https://jakesgordon.com/writing/javascript-tetris/
-
----
-
-### <a href="https://codesandbox.io/p/sandbox/css-shooting-stars-animation-w96ut" target="_blank" rel="noopener">Shooting Stars</a>
-
-Made by <a href="https://codesandbox.io/" target="_blank" rel="noopener">codesandbox.io/</a>
-
-
-https://gamerxr637.is-a.dev/stories
+<https://gamerxr637.is-a.dev/stories/LICENCE.txt>

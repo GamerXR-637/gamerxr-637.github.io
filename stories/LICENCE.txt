@@ -1,0 +1,12 @@
+# Creative Commons Attribution-NonCommercial 4.0 International
+
+This repository's stories are released under the **CC BY-NC 4.0** license.
+
+You can read the complete, legally binding text of the license here:
+
+https://creativecommons.org/licenses/by-nc/4.0/legalcode
+
+---
+
+(The full license text has been omitted from this file for clarity; visit the link above to view it.)
+
