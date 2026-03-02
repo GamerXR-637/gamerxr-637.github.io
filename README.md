@@ -4,6 +4,11 @@ This repository contains content and source code for GamerXR-637's personal webs
 
 <https://gamerxr637.is-a.dev/LICENCE.txt>
 
+## Credits
+
+[ukriu/ukriu.github.io](https://github.com/ukriu/ukriu.github.io)
+Used the font file, and the index.html source code for the stories.html
+
 ## Story Licensing
 
 All stories published at [https://gamerxr637.is-a.dev/stories](https://gamerxr637.is-a.dev/stories) are licensed under the **Creative Commons Attribution-NonCommercial 4.0 International** license. You can view the full text in the `stories/LICENCE` file or at:
