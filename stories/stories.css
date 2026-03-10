@@ -252,7 +252,7 @@ hr {
 
 .read-more:hover {
   background-color: rgb(90, 26, 106);
-  transform: translateX(5px);
+  transform: translateX(5px) translateY(5px);
   color: rgb(143, 37, 54);
 }
 
