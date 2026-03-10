@@ -240,6 +240,7 @@ hr {
 }
 
 .read-more {
+  margin-top: 20px;
   display: inline-block;
   color: #bc3248;
   text-decoration: none;
@@ -252,7 +253,8 @@ hr {
 
 .read-more:hover {
   background-color: rgb(90, 26, 106);
-  transform: translateX(5px) translateY(5px);
+  transform: translateX(-6px) translateY(-6px);
+  transition: all 0.3s ease;
   color: rgb(143, 37, 54);
 }
 
