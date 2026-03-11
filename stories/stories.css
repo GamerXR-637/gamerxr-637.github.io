@@ -104,9 +104,6 @@ a:hover {
 a:active {
   color: var(--active-color);
 }
-#playButton {
-  color: var(--highlight-color);
-}
 
 .nav {
   text-align: center;
@@ -205,7 +202,6 @@ hr {
 .story-card {
   background: linear-gradient(135deg, #1a1f3a, #243447);
   border: 3px solid #5a1a6a;
-  /* border-radius: 15px; */
   padding: 25px;
   box-shadow: 0 8px 16px rgba(90, 26, 106, 0.2);
   transition: all 0.3s ease;
@@ -213,7 +209,7 @@ hr {
 }
 
 .story-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-8px) translatex(-8px);
   box-shadow: 0 12px 24px rgba(90, 26, 106, 0.4);
   border-color: #5a1a6a;
 }
@@ -226,14 +222,14 @@ hr {
 }
 
 .story-excerpt {
-  color: #9202b7;
+  color: #ade5ff;
   font-size: 1em;
   line-height: 1.6;
   margin: 0 0 15px 0;
 }
 
 .story-date {
-  color: #ffffff;
+  color: #da8bff;
   font-size: 0.9em;
   font-style: italic;
   margin: 0 0 15px 0;
@@ -242,24 +238,24 @@ hr {
 .read-more {
   margin-top: 20px;
   display: inline-block;
-  color: #bc3248;
+  color: #ffffff;
   text-decoration: none;
   font-weight: bold;
   padding: 8px 16px;
-  background-color: rgb(108, 9, 133);
-  /* border-radius: 5px; */
+  background-color: rgb(159, 53, 247);
   transition: all 0.3s ease;
 }
 
 .read-more:hover {
-  background-color: rgb(90, 26, 106);
-  transform: translateX(-6px) translateY(-6px);
+  color: #ffffff;
+  background-color: rgb(81, 0, 148);
+  transform: translateX(-3px) translateY(-3px);
   transition: all 0.3s ease;
-  color: rgb(143, 37, 54);
+  color: rgb(255, 255, 255);
 }
 
 .story-author {
-  color: #bc3248;
+  color: #ffffff;
   font-size: 1em;
   line-height: 1.6;
   margin: 0 0 15px 0;
@@ -289,29 +285,23 @@ footer {
 
 a {
   color: #5a1a6a;
+  
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #450046;
+  color: #ffffff;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
-.story-card:nth-child(2) {
+/* .story-card:nth-child(2) {
   background: rgba(93, 4, 131, 0.705);
-}
-.story-card:nth-child(2) .story-excerpt {
-  color: #fff;
-}
+} */
 
-.story-card:nth-child(2) .read-more {
-  color: #fff;
-  background-color: rgb(134, 10, 165);
-}
 
 .story-image {
   width: 15%;
