@@ -1,22 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=IM+Fell+English:ital@0;1&display=swap');
+
+/* colour palette */
+:root {
+  --deep:   #0d0818;
+  --mid:    #1a0f3d;
+  --purple: #3b1f7a;
+  --rose:   #8b2252;
+  --gold:   #c9943a;
+  --warm:   #e8b86d;
+  --text:   #f0e6d3;
+  --faint:  rgba(240, 230, 211, 0.55);
+}
+
+/* sensible base so every page using these fonts looks consistent */
 body {
-  background: linear-gradient(
-    to top,
-    #2d1e60 0%,
-    #ff512f 40%,
-    #f09819 60%,
-    #ffb347 80%,
-    #ffe29f 100%
+  font-family: 'IM Fell English', Georgia, 'Times New Roman', serif;
+  color: var(--text);
+  background-color: var(--deep); /* fallback if bg css isn't loaded */
+}
+
+
+#stars,
+#particles {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+#stars     { z-index: 0; }
+#particles { z-index: 2; }
+
+/* deep purple night-sky gradient */
+.sky {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 80% 55% at 50%  0%, #3d1060 0%, transparent 65%),
+    radial-gradient(ellipse 60% 40% at 20% 30%, #6b1a4e 0%, transparent 55%),
+    radial-gradient(ellipse 50% 35% at 80% 20%, #1a0f3d 0%, transparent 60%),
+    linear-gradient(to bottom, #0d0818 0%, #160d30 35%, #0f0622 70%, #080412 100%);
+}
+
+/* mountain-silhouette horizon glow */
+.horizon {
+  position: fixed;
+  bottom: 0;
+  left: 0; right: 0;
+  height: 45vh;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(to top,
+    #0d0818   0%,
+    #1a0b3e  30%,
+    #3d1060  55%,
+    #6b1a4e  70%,
+    #8b2252  80%,
+    transparent 100%
   );
-  font-family: "Segoe UI", Arial, sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-  margin: 0;
-  position: relative;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  padding-bottom: 100px;
-  padding-top: 60px; /* Pushes content down from under the fixed banner */
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 400'%3E%3Cpath d='M0 400 Q100 280 180 320 Q260 360 300 280 Q360 200 440 260 Q520 320 580 220 Q640 140 720 200 Q800 260 860 200 Q920 140 1000 180 Q1080 220 1200 120 L1200 400 Z' fill='white'/%3E%3C/svg%3E");
+  mask-size: 100% 100%;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 400'%3E%3Cpath d='M0 400 Q100 280 180 320 Q260 360 300 280 Q360 200 440 260 Q520 320 580 220 Q640 140 720 200 Q800 260 860 200 Q920 140 1000 180 Q1080 220 1200 120 L1200 400 Z' fill='white'/%3E%3C/svg%3E");
+  -webkit-mask-size: 100% 100%;
 }
 
 footer {
@@ -29,6 +74,7 @@ footer {
   color: #ffffff;
   z-index: 1000;
   color: white;
+  font-family: 'Cinzel Decorative', cursive;
 }
 
 footer a {
@@ -47,7 +93,7 @@ body::after {
   bottom: 0;
   width: 100vw;
   height: 35vh;
-  background: linear-gradient(to top, #2d1e60 90%, transparent 100%);
+  background: linear-gradient(to top, var(--purple) 90%, transparent 100%);
   clip-path: polygon(
     0% 100%,
     15% 80%,
@@ -72,7 +118,7 @@ body::before {
   bottom: 0;
   width: 100vw;
   height: 35vh;
-  background: linear-gradient(to top, #2d1383 90%, transparent 100%);
+  background: linear-gradient(to top, var(--mid) 90%, transparent 100%);
   clip-path: polygon(
     0% 100%,
     15% 80%,
@@ -91,49 +137,76 @@ body::before {
   transform: translateX(15px);
 }
 
-para {
-  color: rgb(255, 255, 255);
-  font-size: 1.2rem;
-  text-align: left;
-  margin-top: 20px;
-  max-width: 600px;
-  width: 600px;
-  background-color: rgba(45, 30, 96, 0.9); /* Deep Cosmic Purple */
-  padding: 20px;
-  white-space: pre-line;
-  border-radius: 3px;
-  overflow-wrap: break-word;
-}
-
-.coming-soon-container {
-  text-align: center;
-}
-
-.coming-soon-title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  letter-spacing: 2px;
-}
-
-.coming-soon-text {
-  font-size: 1.2rem;
-}
 
 .banner {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #1e1e1e;
+  background-color: var(--deep);
   color: #2421d1;
   text-align: center;
   padding: 1px 0;
   font-family: "Courier New", Courier, monospace;
   font-size: 15px;
-  border-bottom: 2px solid #21bdd1;
+  border-bottom: 2px solid var(--gold);
   z-index: 1000;
-  box-shadow: #ffffff 0px 10px 20px;
-  text-shadow: #21bdd1 0px 0px 20px;
+  box-shadow: var(--text) 0px 10px 20px;
   padding-top: 20px;
+}
+
+
+.text {
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0 auto;
+  position: relative;
+  z-index: 100;
+  padding-bottom: 100px;
+  padding-top: 60px;
+  max-width: 900px;
+  text-align: left;
+
+}
+
+.text p {
+  color: var(--warm);
+  max-width: 100vh;
+  white-space: pre-line;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+  margin: 0.5rem auto;
+  line-height: 1.55;
+}
+
+.text a {
+  color: var(--rose);
+  text-decoration: none;
+}
+
+.text a:hover {
+  color: var(--purple);
+  text-shadow: 2px 2px 9px var(--rose);
+}
+
+.button {
+  margin-top: 20px;
+  display: inline-block;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  background-color: var(--purple);
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  color: #ffffff;
+  background-color: var(--mid);
+  transform: translateX(-3px) translateY(-3px);
+  transition: all 0.3s ease;
+  color: rgb(255, 255, 255);
 }
