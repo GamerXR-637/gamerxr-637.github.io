@@ -3,11 +3,14 @@
 }
 
 body {
-  background: linear-gradient(
-    135deg,
-    rgba(10, 20, 50, 0.9),
-    rgba(30, 10, 60, 0.85)
-  );
+  
+  
+  background:
+    radial-gradient(ellipse 80% 55% at 50%  0%, #3d1060 0%, transparent 65%),
+    radial-gradient(ellipse 50% 35% at 30% 20%, #1a0f3d 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 20% 60%, #6b1a4e 0%, transparent 55%), 
+    linear-gradient( 135deg, rgba(10, 20, 50, 0.9), rgba(30, 10, 60, 0.85));
+  
   font-family: "Kalam", cursive;
   font-size: clamp(16px, 4vw, 20px);
   margin: 0.8rem 0 2rem 0;

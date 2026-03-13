@@ -8,7 +8,16 @@
   font-display: swap;
 }
 
+
 :root {
+  --deep:   #0d0818;
+  --mid:    #1a0f3d;
+  --purple: #3b1f7a;
+  --rose:   #8b2252;
+  --gold:   #c9943a;
+  --warm:   #e8b86d;
+  --text:   #f0e6d3;
+  --faint:  rgba(240, 230, 211, 0.55);
   font-family: "fixedsys_excelsior_3.01Rg", sans-serif;
   --font: "fixedsys_excelsior_3.01Rg", sans-serif;
   font-size: 1rem;
@@ -203,14 +212,18 @@ hr {
   background: linear-gradient(135deg, #1a1f3a, #243447);
   border: 3px solid #5a1a6a;
   padding: 25px;
-  box-shadow: 0 8px 16px rgba(90, 26, 106, 0.2);
   transition: all 0.3s ease;
   cursor: pointer;
+  box-shadow: 3px 3px 10px rgba(188, 50, 72, 0.6);
 }
 
 .story-card:hover {
+  box-shadow:
+    6px 6px 10px rgba(188, 50, 72, 0.6),
+    8px 8px 10px rgba(0, 0, 255, 0.5),
+    11px 11px 10px rgb(139, 34, 82, 0.5);
+  z-index: 10;
   transform: translateY(-8px) translatex(-8px);
-  box-shadow: 0 12px 24px rgba(90, 26, 106, 0.4);
   border-color: #5a1a6a;
 }
 
@@ -298,16 +311,15 @@ a:hover {
   transition: color 0.3s ease;
 }
 
-/* .story-card:nth-child(2) {
+.story-card:nth-child(1) {
   background: rgba(93, 4, 131, 0.705);
-} */
+}
 
-
-.story-image {
-  width: 15%;
-  height: fit-content;
-  margin-right: 10px;
-  border-radius: 5px;
-  display: inline-block;
-  vertical-align: middle;
-} 
+.story-card:nth-child(1):hover {
+  transition: all 0.3s ease;
+  background:
+    radial-gradient(ellipse 80% 55% at 50%  0%, #3d1060 0%, transparent 65%),
+    radial-gradient(ellipse 60% 40% at 20% 30%, #6b1a4e 0%, transparent 55%),
+    radial-gradient(ellipse 50% 35% at 80% 20%, #1a0f3d 0%, transparent 60%),
+    linear-gradient(to bottom, #0d0818 0%, #160d30 35%, #0f0622 70%, #080412 100%);
+}
