@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Number Guessing Game</title>
+     <link rel="icon" href="favicon.ico" type="image/x-icon">
+     <style>
+     body {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-align: center;
+        margin-top: 220px;
+        background: linear-gradient(
+            to right,
+            rgb(116, 255, 139),
+            rgb(218, 0, 218),
+            pink,
+            lightblue,
+            rgb(87, 87, 227),
+            rgb(255, 74, 74),
+            rgb(133, 255, 155),
+            rgb(255, 255, 92),
+            rgb(250, 145, 198),
+            rgb(255, 178, 110),
+            #ff7e5f,
+            #7beffe,
+            lightgreen,
+            #F1597C,
+            #E568B3,
+            #6DBCFF,
+            #FFB06D
+        );
+        background-size: 2000% 2000%; /* Increased size for smoother transitions */
+        animation: gradientAnimation 60s ease infinite; /* Increased duration for smoother animation */
+    }
+
+    @keyframes gradientAnimation {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+ 
+         #game-container {
+             display: none;
+         }
+ 
+         #message {
+             margin: 20px 0;
+             font-size: 1.2em;
+         }
+ 
+         input {
+             padding: 10px;
+             font-size: 1em;
+         }
+ 
+         button {
+             padding: 10px 20px;
+             font-size: 1em;
+             cursor: pointer;
+         }
+     </style>
+     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+ </head>
+ <body>
+     <h1>Number Guessing Game</h1>
+     <div id="setup-container">
+         <p>Choose the maximum number for the guessing range:</p>
+         <input type="number" id="max-number" placeholder="Enter max number" min="1">
+         <button id="start-game">Start Game</button>
+         <button id="generate-random">Generate Random Number</button> <!-- New button -->
+     </div>
+     <div id="game-container">
+         <p id="message">Guess a number between 1 and <span id="max-number-display"></span>. You have <span id="attempts-display"></span> attempts.</p>
+         <input type="number" id="guess-input" placeholder="Guess" min="1">
+         <button id="submit-guess">Submit Guess</button>
+         <button id="restart-game" style="display: none;">Restart Game</button> <!-- New Restart Button -->
+     </div>
+ 
+     <script>
+         let randomNumber;
+         let attempts;
+         let maxNumber;
+ 
+         const setupContainer = document.getElementById('setup-container');
+         const startButton = document.getElementById('start-game');
+         const generateRandomButton = document.getElementById('generate-random');
+         const gameContainer = document.getElementById('game-container');
+         const message = document.getElementById('message');
+         const guessInput = document.getElementById('guess-input');
+         const submitGuessButton = document.getElementById('submit-guess');
+         const restartGameButton = document.getElementById('restart-game'); // New Restart Button
+         const maxNumberInput = document.getElementById('max-number');
+         const maxNumberDisplay = document.getElementById('max-number-display');
+         const attemptsDisplay = document.getElementById('attempts-display');
+ 
+         startButton.addEventListener('click', () => {
+             maxNumber = parseInt(maxNumberInput.value, 10);
+ 
+             if (isNaN(maxNumber) || maxNumber < 10 || maxNumber > 1000) {
+                 alert("Please enter a valid maximum number between 10 and 1000.");
+                 return;
+             }
+          let padding;
+if (Math.floor((maxNumber * .05)) <= 200 && Math.floor((maxNumber * .05)) >= 50) {
+padding = Math.floor(Math.random() * 10) + 2
+}
+else {
+padding = Math.floor(Math.random() * 3) - 1
+}
+  randomNumber = Math.floor(Math.random() * maxNumber) + 1;
+  attempts = Math.floor((maxNumber * .05) + padding / randomNumber + Math.floor(Math.random() * 3))
+  console.log(attempts)
+             maxNumberDisplay.textContent = maxNumber;
+             attemptsDisplay.textContent = attempts;
+             setupContainer.style.display = 'none';
+             gameContainer.style.display = 'block';
+             restartGameButton.style.display = 'none'; // Hide restart button at the start
+             guessInput.disabled = false;
+             submitGuessButton.disabled = false;
+             message.textContent = `Guess a number between 1 and ${maxNumber}. You have ${attempts} attempts.`;
+         });
+ 
+         generateRandomButton.addEventListener('click', () => {
+             const randomMax = Math.floor(Math.random() * (1000 - 10 + 1)) + 10;
+             maxNumberInput.value = randomMax;
+         });
+ 
+         const handleGuess = () => {
+             const userGuess = parseInt(guessInput.value, 10);
+ 
+             if (isNaN(userGuess) || userGuess < 1 || userGuess > maxNumber) {
+                 message.textContent = `Please enter a valid number between 1 and ${maxNumber}.`;
+             } else if (userGuess === randomNumber) {
+                 message.textContent = "Congratulations! You guessed the correct number!";
+                 guessInput.disabled = true;
+                 submitGuessButton.disabled = true;
+                 restartGameButton.style.display = 'inline-block'; // Show restart button
+ 
+                 confetti({
+                     particleCount: 100,
+                     spread: 70,
+                     origin: { y: 0.6 }
+                 });
+             } else {
+    attempts--;
+    if (attempts > 0) {
+        // Define the chance to get a hint (e.g., 0.75 for 75%)
+        const hintChance = Math.floor(Math.random() * 100) / 100
+        let hintMessage = "No hint this time!"; // Default message
+
+        // Randomly decide whether to give the actual hint
+        if (Math.random() < hintChance) {
+            hintMessage = userGuess > randomNumber ? "The number is too high" : "The number is too low";
+        }
+
+        message.textContent = `Wrong guess! ${hintMessage}. You have ${attempts} attempts left to guess between 1 and ${maxNumber}.`;
+    } else {
+        message.textContent = `Game over! The correct number was ${randomNumber}.`;
+        guessInput.disabled = true;
+        submitGuessButton.disabled = true;
+        restartGameButton.style.display = 'inline-block'; // Show restart button
+    }
+}
+
+ 
+             guessInput.value = '';
+         };
+ 
+         submitGuessButton.addEventListener('click', handleGuess);
+ 
+         guessInput.addEventListener('keydown', (event) => {
+             if (event.key === 'Enter') {
+                 handleGuess();
+             }
+         });
+
+         // Restart Game Button Event Listener
+         restartGameButton.addEventListener('click', () => {
+             setupContainer.style.display = 'block';
+             gameContainer.style.display = 'none';
+             maxNumberInput.value = '';
+             message.textContent = '';
+         });
+
+         let visitCount = localStorage.getItem('visitCount');
+
+         if (!visitCount) {
+             visitCount = 1;
+         } else {
+             visitCount = parseInt(visitCount, 10) + 1;
+         }
+
+         localStorage.setItem('visitCount', visitCount);
+
+         document.body.insertAdjacentHTML('beforeend', `<p>You have visited this page ${visitCount} times.</p>`);
+     </script>
+     <footer style="position: fixed; bottom: 10px; width: 100%; text-align: center; color: #333;">
+         <p>&copy; 2024 <a href="https://github.com/GamerXR-637/GuessTheNumber" style="color: #ffffff; text-decoration: none;">Number Guessing Game</a>. Free to use.</p>
+         <p>Made By GamerXR-637</p>
+     </footer>
+ </body>
+ </html>

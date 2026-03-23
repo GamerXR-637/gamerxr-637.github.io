@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Donate — Technology for One</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilex:ital,wght@0,100..700;1,100..700&display=swap">
+    <style>
+      /* lightweight page-specific styles so this works even if index.css is missing */
+      body { font-family: 'Lilex', system-ui, sans-serif; background:#0f1720; color:#fff; margin:0; padding:2rem; }
+      .container { max-width:840px; margin:0 auto; }
+      label { display:block; margin-top:.75rem; font-weight:600; }
+      input, textarea, select { width:100%; padding:.5rem; margin-top:.25rem; border-radius:6px; border:1px solid #333; background:#0b1220; color:#fff; }
+      .actions { margin-top:1rem; display:flex; gap:.75rem; align-items:center; }
+      .btn { background:#0b6cff; color:#fff; padding:.6rem 1rem; border-radius:6px; border:none; cursor:pointer; text-decoration:none; display:inline-block; }
+      .note { margin-top:.75rem; color:#ffd; font-size:.95rem; }
+      .back { background:transparent; border:1px solid #444; color:#fff; padding:.4rem .75rem; border-radius:6px; text-decoration:none; }
+
+      /* modal / approve screen */
+      .modal-backdrop {
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.6);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+      }
+      .modal {
+        background: #0b1220;
+        border: 1px solid #222;
+        padding: 1.25rem;
+        border-radius: 8px;
+        max-width: 560px;
+        width: calc(100% - 2rem);
+        box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+      }
+      .modal h2 { margin: 0 0 .5rem 0; }
+      .modal .field { margin-bottom: .5rem; }
+      .modal .label { color:#9fb3ff; font-weight:600; font-size:.9rem; }
+      .modal .value { color:#fff; font-size:.95rem; margin-top:.15rem; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Donate a Device</h1>
+      <!-- <p class="note">This form is for demo purposes only and will not send or store any data.</p> -->
+
+      <form id="donate-form" novalidate>
+        <label for="name">Full name</label>
+        <input id="name" name="name" type="text" required />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required />
+
+        <label for="phone">Phone (optional)</label>
+        <input id="phone" name="phone" type="tel" />
+
+        <label for="device">Device type</label>
+        <select id="device" name="device" required>
+          <option value="">Select device</option>
+          <option>Laptop</option>
+          <option>Desktop</option>
+          <option>Tablet</option>
+          <option>Phone</option>
+          <option>Other</option>
+        </select>
+
+        <label for="condition">Condition</label>
+        <select id="condition" name="condition" required>
+          <option value="">Select condition</option>
+          <option>New</option>
+          <option>Good</option>
+          <option>Fair</option>
+          <option>Poor</option>
+        </select>
+
+        <label for="description">Description / Model / Notes</label>
+        <textarea id="description" name="description" rows="4"></textarea>
+
+        <label for="address">Pickup / Dropoff address (optional)</label>
+        <textarea id="address" name="address" rows="3"></textarea>
+
+        <label>
+          <input type="checkbox" id="consent" required /> I agree to donate this device
+        </label>
+
+        <div class="actions">
+          <button type="submit" class="btn">Submit (demo)</button>
+          <a href="index.html" class="back">Back to Home</a>
+        </div>
+
+        <p id="result" class="note" aria-live="polite"></p>
+      </form>
+      <!-- confirm modal -->
+      <div id="confirm-modal" class="modal-backdrop" aria-hidden="true">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="confirm-title">
+          <h2 id="confirm-title">Confirm Donation Details</h2>
+          <div id="confirm-details" aria-live="polite">
+            <!-- populated by JS -->
+          </div>
+          <div class="actions" style="margin-top:1rem;">
+            <button id="approve-btn" class="btn" type="button">Approve (demo)</button>
+            <button id="cancel-btn" class="back" type="button">Cancel</button>
+          </div>
+          <!-- <p class="note" style="margin-top:.75rem">Demo note: approving will not send or store your data.</p> -->
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Prevent any actual submission or network activity — this form does nothing.
+      document.getElementById('donate-form').addEventListener('submit', function (e) {
+        e.preventDefault(); // stops submission
+        // show a benign confirmation so the user knows nothing was sent
+        const result = document.getElementById('result');
+        result.textContent = 'Your information was not submitted.';
+      }, false);
+      (function () {
+        const form = document.getElementById('donate-form');
+        const modal = document.getElementById('confirm-modal');
+        const details = document.getElementById('confirm-details');
+        const approveBtn = document.getElementById('approve-btn');
+        const cancelBtn = document.getElementById('cancel-btn');
+        const result = document.getElementById('result');
+
+        function openModal() {
+          modal.style.display = 'flex';
+          modal.setAttribute('aria-hidden', 'false');
+          approveBtn.focus();
+        }
+        function closeModal() {
+          modal.style.display = 'none';
+          modal.setAttribute('aria-hidden', 'true');
+        }
+
+        form.addEventListener('submit', function (e) {
+          e.preventDefault(); // stop submission
+          // collect values
+          const data = {
+            name: form.name.value || '(not provided)',
+            email: form.email.value || '(not provided)',
+            phone: form.phone.value || '(not provided)',
+            device: form.device.value || '(not provided)',
+            condition: form.condition.value || '(not provided)',
+            description: form.description.value || '(none)',
+            address: form.address.value || '(none)'
+          };
+          // populate modal
+          details.innerHTML = `
+            <div class="field"><div class="label">Name</div><div class="value">${escapeHtml(data.name)}</div></div>
+            <div class="field"><div class="label">Email</div><div class="value">${escapeHtml(data.email)}</div></div>
+            <div class="field"><div class="label">Phone</div><div class="value">${escapeHtml(data.phone)}</div></div>
+            <div class="field"><div class="label">Device</div><div class="value">${escapeHtml(data.device)}</div></div>
+            <div class="field"><div class="label">Condition</div><div class="value">${escapeHtml(data.condition)}</div></div>
+            <div class="field"><div class="label">Description</div><div class="value">${escapeHtml(data.description)}</div></div>
+            <div class="field"><div class="label">Address</div><div class="value">${escapeHtml(data.address)}</div></div>
+          `;
+          openModal();
+        }, false);
+
+        approveBtn.addEventListener('click', function () {
+          closeModal();
+          result.textContent = 'Submission approved: your information was submitted.';
+          // keep form as-is so user can edit or keep a copy; no network activity performed
+        });
+
+        cancelBtn.addEventListener('click', function () {
+          closeModal();
+          result.textContent = ''; // clear any message
+        });
+
+        // close modal on backdrop click
+        modal.addEventListener('click', function (ev) {
+          if (ev.target === modal) closeModal();
+        });
+
+        // close on Escape key
+        document.addEventListener('keydown', function (ev) {
+          if (ev.key === 'Escape' && modal.style.display === 'flex') {
+            closeModal();
+          }
+        });
+
+        // tiny helper to avoid inserting raw HTML
+        function escapeHtml(str) {
+          return String(str).replace(/[&<>"']/g, function (s) {
+            return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[s];
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>
