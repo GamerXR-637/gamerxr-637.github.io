@@ -1,15 +1,3 @@
-/* ── irenea-stars.js ──────────────────────────────────────────
-   Animated starfield + drifting ember particles.
-
-   HOW TO USE:
-     1. Add two canvases to your HTML:
-          <canvas id="stars"></canvas>
-          <canvas id="particles"></canvas>
-     2. Import this script at the bottom of <body>:
-          <script src="irenea-stars.js"></script>
-   ──────────────────────────────────────────────────────────── */
-
-/* STARFIELD */
 (function () {
   const canvas = document.getElementById('stars');
   if (!canvas) return;
@@ -53,8 +41,6 @@
   requestAnimationFrame(draw);
 })();
 
-
-/* DRIFTING EMBERS */
 (function () {
   const canvas = document.getElementById('particles');
   if (!canvas) return;
