@@ -33,10 +33,17 @@
     </div>
     
   </body>
-    <footer>
-      <a href="https://gamerxr637.is-a.dev/stories/iren[e]a.html">Iren[e]a</a> ©
-      2025 by gamerxr637, Yippie! is licensed under
+    <footer class="site-footer">
+      <a href="https://gamerxr637.is-a.dev/stories/iren[e]a.html">Iren[e]a</a> © <span class="year"></span> by gamerxr637, Yippie! is licensed under
       <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
     </footer>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var y = new Date().getFullYear();
+            var el = document.querySelector('.site-footer .year');
+            if (el) el.textContent = y;
+        });
+    </script>
 
 </html>
