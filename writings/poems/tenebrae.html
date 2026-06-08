@@ -6,6 +6,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
 
     <style>
+        body {
+            background:
+                radial-gradient(ellipse 80% 55% at 20%  70%, #113266 0%, transparent 65%),
+                radial-gradient(ellipse 50% 35% at 30% 20%, #1a0f3d 0%, transparent 100%),
+                radial-gradient(ellipse 60% 40% at 50% 0%, #6b1a4e 0%, transparent 45%), 
+                radial-gradient(ellipse 50% 40% at 60% 20%, #1a546b 0%, transparent 55%), 
+                linear-gradient(135deg, rgb(0, 0, 0), rgb(51, 5, 104), rgba(85, 31, 166, 0.85), rgb(51, 5, 104), rgb(0, 0, 0));
+            font-family: var(--font);
+            margin: 0.8rem 0 2rem 0;
+            color: #e0e0ff;
+            padding: 0 1rem;
+        }
+
+        hr {
+          border: none;
+          border-top: 10px double #3d0082;
+          overflow: visible;
+          text-align: center;
+          height: 15px;
+          }
+        
+        hr::after {
+          content: "§";
+          padding: 0 10px;
+          position: relative;
+          top: -16px;
+        }
+
+
         @font-face {
             font-family: 'fixedsys_excelsior_3.01Rg';
             src: url('../../other/font.woff2') format('woff2'), url('../../other/font.woff') format('woff');
@@ -24,14 +53,6 @@
         * {
             box-sizing: border-box;
             font-family: var(--font);
-        }
-
-        body {
-            background: linear-gradient(135deg, rgb(0, 0, 0), rgba(85, 31, 166, 0.85));
-            font-family: var(--font);
-            margin: 0.8rem 0 2rem 0;
-            color: #e0e0ff;
-            padding: 0 1rem;
         }
 
         pre {
@@ -171,17 +192,23 @@
 
 
 <body style="background-color: #180231; color: white; font-family: 'Kalam', cursive; margin: 0; padding: 20px;">
+    
     <h1>Tenebrae</h1>
+    
     <div class="nav-buttons">
         <button class="button" onclick="window.location.href='../../index.html'">Back to Home</button>
-        <button class="button" onclick="window.location.href='..'" style="margin-left: 20px;">Stories
-            Portal</button>
+        <button class="button" onclick="window.location.href='..'" style="margin-left: 20px;">Stories Portal</button>
     </div>
+    
+    <div style="margin: 20px auto; max-width: 800px; text-align: center; "">
+        <hr/>
+    </div>
+    
     <pre style = "text-align: center;">
         
-**=-=-=-=-=-=-=-=-=-=-=***=-=-=-=-=-=-=-=-=-=-=**
+**=-=-=-=-=-=-=-=-=***=-=-=-=-=-=-=-=-=**
 To you?
-**=-=-=-=-=-=-=-=***=-=-=-=-=-=-=-=**
+**=-=-=-=-=-=***=-=-=-=-=-=**
 
 Tenebrae sits alone
 Afar from all
