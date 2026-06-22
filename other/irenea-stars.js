@@ -11,27 +11,33 @@
 
   function seed() {
     stars = [];
-    const count = Math.floor((canvas.width * canvas.height) / 3800);
+    const count = Math.floor((canvas.width * canvas.height) / 3637);
     for (let i = 0; i < count; i++) {
       stars.push({
         x:     Math.random() * canvas.width,
-        y:     Math.random() * canvas.height * 0.75,
-        r:     Math.random() * 1.3 + 0.2,
+        y:     Math.random() * canvas.height,
+        r:     Math.random() * 10.5 + Math.random(),
         a:     Math.random(),
         speed: Math.random() * 0.004 + 0.001,
-        phase: Math.random() * Math.PI * 2
+        phase: Math.random() * Math.PI * 2,
+        life: 1
       });
     }
   }
 
   function draw(t) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    // stars = stars.filter(s => s.life > 0);
     stars.forEach(s => {
       const alpha = s.a * (0.5 + 0.5 * Math.sin(t * s.speed + s.phase));
       ctx.beginPath();
       ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(255,240,210,${alpha})`;
       ctx.fill();
+      s.life -= 0.003
+      const r = Math.round(201 + (139 - 201) * (1 - s.life));
+      const g = Math.round(148 + ( 34 - 148) * (1 - s.life));
+      const b = Math.round( 58 + ( 82 -  58) * (1 - s.life));
+      ctx.fillStyle = `rgba(${r},${g},${b},${alpha})`;
     });
     requestAnimationFrame(draw);
   }

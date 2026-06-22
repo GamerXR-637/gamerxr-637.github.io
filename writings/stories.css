@@ -32,18 +32,19 @@ body {
   margin: 0 auto;
   background: #000;
   background:
-    url(../other/bg.gif) repeat center center,
-    #000;
+    radial-gradient(ellipse 80% 55% at 50%  0%, #3d1060 0%, transparent 65%),
+    radial-gradient(ellipse 60% 40% at 20% 30%, #6b1a4e 0%, transparent 55%),
+    radial-gradient(ellipse 50% 35% at 80% 20%, #1a0f3d 0%, transparent 60%),
+    linear-gradient(to bottom, #0d0818 0%, #160d30 35%, #0f0622 70%, #080412 100%) no-repeat;
   background-attachment: fixed;
   background-size: cover;
-}
-
-body {
   display: flex;
   flex-direction: column;
   height: 100vh;
   max-width: 650px;
 }
+
+
 
 header {
   flex-shrink: 0;
@@ -314,6 +315,13 @@ a:hover {
 .story-card:nth-child(1) {
   background: rgba(93, 4, 131, 0.705);
 }
+
+#stars{
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+#stars     { z-index: -1; }
 
 .story-card:nth-child(1):hover {
   transition: all 0.3s ease;
